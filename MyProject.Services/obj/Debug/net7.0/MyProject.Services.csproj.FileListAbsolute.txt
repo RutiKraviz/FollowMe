@@ -1,0 +1,60 @@
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\bin\Debug\net7.0\MyProject.Services.deps.json
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\bin\Debug\net7.0\MyProject.Services.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\bin\Debug\net7.0\MyProject.Services.pdb
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\bin\Debug\net7.0\MyProject.Common.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\bin\Debug\net7.0\MyProject.Repositories.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\bin\Debug\net7.0\MyProject.Common.pdb
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\bin\Debug\net7.0\MyProject.Repositories.pdb
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.AssemblyReference.cache
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.AssemblyInfoInputs.cache
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.AssemblyInfo.cs
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.CoreCompileInputs.cache
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.CopyComplete
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\refint\MyProject.Services.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.pdb
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\ref\MyProject.Services.dll
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.AssemblyReference.cache
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.AssemblyInfoInputs.cache
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.AssemblyInfo.cs
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.CoreCompileInputs.cache
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.dll
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\refint\MyProject.Services.dll
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.Services\obj\Debug\net7.0\MyProject.Services.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\bin\Debug\net7.0\MyProject.Services.deps.json
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\bin\Debug\net7.0\MyProject.Services.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\bin\Debug\net7.0\MyProject.Services.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\bin\Debug\net7.0\MyProject.Common.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\bin\Debug\net7.0\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\bin\Debug\net7.0\MyProject.Common.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\bin\Debug\net7.0\MyProject.Repositories.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.AssemblyInfo.cs
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.sourcelink.json
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.CopyComplete
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\obj\Debug\net7.0\refint\MyProject.Services.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject.Services\obj\Debug\net7.0\ref\MyProject.Services.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Services.deps.json
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Services.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Services.pdb
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Common.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Common.pdb
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Repositories.pdb
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.AssemblyInfo.cs
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.CopyComplete
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\refint\MyProject.Services.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.pdb
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\ref\MyProject.Services.dll

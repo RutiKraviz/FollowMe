@@ -1,0 +1,49 @@
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\bin\Debug\net6.0\MyProject.Repositories.deps.json
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\bin\Debug\net6.0\MyProject.Repositories.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\bin\Debug\net6.0\MyProject.Repositories.pdb
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.csproj.AssemblyReference.cache
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.AssemblyInfoInputs.cache
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.AssemblyInfo.cs
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.csproj.CoreCompileInputs.cache
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\refint\MyProject.Repositories.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.pdb
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\ref\MyProject.Repositories.dll
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.csproj.AssemblyReference.cache
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.AssemblyInfoInputs.cache
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.AssemblyInfo.cs
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.csproj.CoreCompileInputs.cache
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.dll
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\refint\MyProject.Repositories.dll
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\MyProject.Repositories.pdb
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\bin\Debug\net6.0\MyProject.Repositories.deps.json
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\bin\Debug\net6.0\MyProject.Repositories.dll
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\bin\Debug\net6.0\MyProject.Repositories.pdb
+D:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject\obj\Debug\net6.0\ref\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollewMe\MyProject\bin\Debug\net6.0\MyProject.Repositories.deps.json
+C:\Users\user1\Desktop\FollewMe\MyProject\bin\Debug\net6.0\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollewMe\MyProject\bin\Debug\net6.0\MyProject.Repositories.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\FollewMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\FollewMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\FollewMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.AssemblyInfo.cs
+C:\Users\user1\Desktop\FollewMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\FollewMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.sourcelink.json
+C:\Users\user1\Desktop\FollewMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollewMe\MyProject\obj\Debug\net6.0\refint\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollewMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject\obj\Debug\net6.0\ref\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollowMe\MyProject\bin\Debug\net6.0\MyProject.Repositories.deps.json
+C:\Users\user1\Desktop\FollowMe\MyProject\bin\Debug\net6.0\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollowMe\MyProject\bin\Debug\net6.0\MyProject.Repositories.pdb
+C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.AssemblyInfo.cs
+C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\refint\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.pdb
+C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\ref\MyProject.Repositories.dll

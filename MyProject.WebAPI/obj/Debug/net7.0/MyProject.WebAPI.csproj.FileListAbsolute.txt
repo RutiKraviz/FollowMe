@@ -1,0 +1,130 @@
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\appsettings.Development.json
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\appsettings.json
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.exe
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.deps.json
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.runtimeconfig.json
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.pdb
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\AutoMapper.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Common.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Repositories.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Services.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Services.pdb
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Common.pdb
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Repositories.pdb
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.csproj.AssemblyReference.cache
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.AssemblyInfoInputs.cache
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.AssemblyInfo.cs
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.csproj.CoreCompileInputs.cache
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.MyProject.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.MyProject.WebAPI.props
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MyProject.WebAPI.props
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MyProject.WebAPI.props
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets.pack.json
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets.build.json
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets.development.json
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\scopedcss\bundle\MyProject.WebAPI.styles.css
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.csproj.CopyComplete
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\refint\MyProject.WebAPI.dll
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.pdb
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.genruntimeconfig.cache
+E:\רותי\שנה ב - ו סמינר\פרויקט\MyProject\MyProject.WebAPI\obj\Debug\net7.0\ref\MyProject.WebAPI.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.AssemblyInfo.cs
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.sourcelink.json
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\appsettings.json
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.exe
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.deps.json
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.runtimeconfig.json
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Common.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Services.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Services.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Common.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Repositories.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.MyProject.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.MyProject.WebAPI.props
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MyProject.WebAPI.props
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MyProject.WebAPI.props
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\scopedcss\bundle\MyProject.WebAPI.styles.css
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.csproj.CopyComplete
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\refint\MyProject.WebAPI.dll
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.pdb
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.genruntimeconfig.cache
+C:\Users\user1\Desktop\FollewMe\MyProject.WebAPI\obj\Debug\net7.0\ref\MyProject.WebAPI.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\appsettings.json
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.exe
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.deps.json
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.runtimeconfig.json
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.WebAPI.pdb
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Common.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Services.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Services.pdb
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Common.pdb
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\bin\Debug\net7.0\MyProject.Repositories.pdb
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.AssemblyInfo.cs
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.MyProject.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.MyProject.WebAPI.props
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MyProject.WebAPI.props
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MyProject.WebAPI.props
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\scopedcss\bundle\MyProject.WebAPI.styles.css
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.csproj.CopyComplete
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\refint\MyProject.WebAPI.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.pdb
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\MyProject.WebAPI.genruntimeconfig.cache
+C:\Users\user1\Desktop\FollowMe\MyProject.WebAPI\obj\Debug\net7.0\ref\MyProject.WebAPI.dll
