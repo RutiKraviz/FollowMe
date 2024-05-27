@@ -50,3 +50,4 @@ C:\Users\user1\Desktop\FollowMe\MyProject.Context\obj\Debug\net8.0\refint\MyProj
 C:\Users\user1\Desktop\FollowMe\MyProject.Context\obj\Debug\net8.0\MyProject.Context.pdb
 C:\Users\user1\Desktop\FollowMe\MyProject.Context\obj\Debug\net8.0\MyProject.Context.genruntimeconfig.cache
 C:\Users\user1\Desktop\FollowMe\MyProject.Context\obj\Debug\net8.0\ref\MyProject.Context.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.Context\obj\Debug\net8.0\MyProject.Context.sourcelink.json

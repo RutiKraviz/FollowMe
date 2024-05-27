@@ -47,3 +47,4 @@ C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositorie
 C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\refint\MyProject.Repositories.dll
 C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.pdb
 C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\ref\MyProject.Repositories.dll
+C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.sourcelink.json

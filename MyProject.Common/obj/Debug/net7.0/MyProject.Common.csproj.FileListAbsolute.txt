@@ -44,3 +44,4 @@ C:\Users\user1\Desktop\FollowMe\MyProject.Common\obj\Debug\net7.0\MyProject.Comm
 C:\Users\user1\Desktop\FollowMe\MyProject.Common\obj\Debug\net7.0\refint\MyProject.Common.dll
 C:\Users\user1\Desktop\FollowMe\MyProject.Common\obj\Debug\net7.0\MyProject.Common.pdb
 C:\Users\user1\Desktop\FollowMe\MyProject.Common\obj\Debug\net7.0\ref\MyProject.Common.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.Common\obj\Debug\net7.0\MyProject.Common.sourcelink.json
