@@ -21,7 +21,8 @@ namespace MyProject.Services.Services
         }
         public async Task<RouteDTO> AddAsync(RouteDTO route)
         {
-            return _mapper.Map<RouteDTO>(await _routeRepository.AddAsync(route.Id, route.Name, route.BeginningTime));
+            var stations = _mapper.Map<Station>(route.Stations);
+            return _mapper.Map<RouteDTO>(await _routeRepository.AddAsync(route.Id, stations));
         }
 
         public async Task DeleteAsync(int id)

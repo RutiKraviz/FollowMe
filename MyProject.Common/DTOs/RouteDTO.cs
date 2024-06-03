@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyProject.Common.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace MyProject.Repositories.Entities
     public class RouteDTO
     {
         public int Id { get; set; }
-        public string? Name { get; set; }
-        public DateTime BeginningTime { get; set; }
+
+        public List<StationDTO> Stations { get; set; }
     }
 }

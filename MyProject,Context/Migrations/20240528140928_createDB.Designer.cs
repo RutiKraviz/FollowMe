@@ -5,14 +5,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MyProject_Context;
+using MyProject.Context;
 
 #nullable disable
 
 namespace MyProject_Context.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20240527140742_createDB")]
+    [Migration("20240528140928_createDB")]
     partial class createDB
     {
         /// <inheritdoc />

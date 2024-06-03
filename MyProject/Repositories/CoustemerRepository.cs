@@ -38,7 +38,7 @@ namespace MyProject.Repositories.Repositories
             c.Address = coustemer.Address;
             c.City = coustemer.City;
             c.FirstName = coustemer.FirstName;
-            c.LastName = coustemer.lastName;
+            c.LastName = coustemer.LastName;
             await _context.SaveChangesAsync();
             return c;
         }

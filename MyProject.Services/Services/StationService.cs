@@ -13,32 +13,32 @@ namespace MyProject.Services.Services
 {
     public class StationService : IStationInterface
     {
-        private readonly StationRepository _ststionRepository;
+        private readonly StationRepository _stationRepository;
         private readonly IMapper _mapper;
 
         public StationService(StationRepository stationRepository, IMapper mapper)
         {
-            _ststionRepository = stationRepository;
+            _stationRepository = stationRepository;
             _mapper = mapper;
         }
         public async Task<StationDTO> AddAsync(StationDTO station)
         {
-            return _mapper.Map<StationDTO>(await _ststionRepository.AddAsync(station.Id, station.Address, station.RouteId));
+            return _mapper.Map<StationDTO>(await _stationRepository.AddAsync(station.Id, station.Latitude, station.Longitude));
         }
 
         public async Task DeleteAsync(int id)
         {
-           await _ststionRepository.DeleteAsync(id);
+           await _stationRepository.DeleteAsync(id);
         }
 
         public async Task<StationDTO> GetByIdAsync(int id)
         {
-            return _mapper.Map<StationDTO>(await _ststionRepository.GetByIdAsync(id));
+            return _mapper.Map<StationDTO>(await _stationRepository.GetByIdAsync(id));
         }
 
         public async Task<StationDTO> UpdateAsync(StationDTO station)
         {
-            return _mapper.Map<StationDTO>(await _ststionRepository.UpdateAsync(_mapper.Map<Station>(station)));
+            return _mapper.Map<StationDTO>(await _stationRepository.UpdateAsync(_mapper.Map<Station>(station)));
         }
     }
 }

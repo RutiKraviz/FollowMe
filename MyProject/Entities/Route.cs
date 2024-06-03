@@ -9,7 +9,7 @@ namespace MyProject.Repositories.Entities
     public class Route
     {
         public int Id { get; set; }
-        public string? Name { get; set; }
-        public DateTime BeginningTime { get; set; }
+
+        public List<Station>? Stations { get; set; }
     }
 }

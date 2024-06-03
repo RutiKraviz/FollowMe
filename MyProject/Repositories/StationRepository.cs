@@ -16,9 +16,9 @@ namespace MyProject.Repositories.Repositories
             _context = context;
         }
 
-        public async Task<Station> AddAsync(int id, string address, int routeId)
+        public async Task<Station> AddAsync(int id, double latitude, double longitude)
         {
-            var s = new Station() { Id = id, Address = address, RouteId = routeId };
+            var s = new Station() { Id = id, Latitude = latitude,Longitude = longitude };
             _context.Stations.Add(s);
             await _context.SaveChangesAsync();
             return s;
@@ -39,8 +39,8 @@ namespace MyProject.Repositories.Repositories
         {
             var s = GetByIdAsync(station.Id).Result;
             s.Id = station.Id;
-            s.Address = s.Address;
-            s.RouteId = station.RouteId;
+            s.Latitude = s.Latitude;
+            s.Longitude = station.Longitude;
             await _context.SaveChangesAsync();
             return s;
         }

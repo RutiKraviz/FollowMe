@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Collections.Specialized.BitVector32;
 
-namespace MyProject_Context
+namespace MyProject.Context
 {
     public class MyDbContext : DbContext, IContext
     {

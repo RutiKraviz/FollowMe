@@ -15,7 +15,7 @@ namespace MyProject.Repositories.Entities
         public string? FirstName { get; set; }
 
         public string? LastName { get; set; }
-        public string? lastName { get; internal set; }
+
         public string? Address { get; set; }
 
         public string? City { get; set; }

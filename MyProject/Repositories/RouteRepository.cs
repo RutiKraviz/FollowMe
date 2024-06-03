@@ -17,9 +17,9 @@ namespace MyProject.Repositories.Repositories
             _context = context;
         }
 
-        public async Task<Route> AddAsync(int id, string name, DateTime beginningTime)
+        public async Task<Route> AddAsync(int id, List<Station> stations)
         {
-            var r = new Route() { Id = id, Name = name, BeginningTime = beginningTime };
+            var r = new Route() { Id = id, Stations = stations };
             _context.Routes.Add(r);
             await _context.SaveChangesAsync();
             return r;
@@ -40,8 +40,7 @@ namespace MyProject.Repositories.Repositories
         {
             var r = GetByIdAsync(route.Id).Result;
             r.Id = route.Id;
-            r.Name = route.Name;
-            r.BeginningTime = route.BeginningTime;
+            r.Stations = route.Stations;
             await _context.SaveChangesAsync();
             return r;
         }

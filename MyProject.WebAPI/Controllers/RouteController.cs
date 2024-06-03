@@ -27,12 +27,12 @@ namespace MyProject.WebAPI.Controllers
         [HttpPost]
         public async Task<RouteDTO> Post([FromBody] RouteModel routeModel)
         {
-            return await _routeService.AddAsync(new RouteDTO() {  Id = routeModel.Id, Name = routeModel.Name, BeginningTime = routeModel.BeginningTime });
+            return await _routeService.AddAsync(new RouteDTO() {  Id = routeModel.Id, Stations = routeModel.Stations });
         }
         [HttpPut]
         public async Task<RouteDTO> Update([FromBody] RouteModel routeModel)
         {
-            return await _routeService.UpdateAsync(new RouteDTO() { Id = routeModel.Id, Name = routeModel.Name, BeginningTime = routeModel.BeginningTime });
+            return await _routeService.UpdateAsync(new RouteDTO() { Id = routeModel.Id, Stations = routeModel.Stations });
         }
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
