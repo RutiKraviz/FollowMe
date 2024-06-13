@@ -10,6 +10,6 @@ namespace MyProject.Repositories.Entities
     {
         public int Id { get; set; }
 
-        public List<Station>? Stations { get; set; }
+        public List<Station> Stations { get; set; }
     }
 }

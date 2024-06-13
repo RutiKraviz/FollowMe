@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using MyProject.Common.DTOs;
 using MyProject.Repositories.Entities;
-using MyProject.Services.Interraces;
+using MyProject.Services.Interfaces;
 using MyProject.WebAPI.Models;
 
 
@@ -11,10 +12,12 @@ namespace MyProject.WebAPI.Controllers
     [ApiController]
     public class DriverController: ControllerBase
     {
-        private readonly IDriverinterface _driverService;
-        public DriverController(IDriverinterface driverService)
+        private readonly IDriverService _driverService;
+        private readonly IMapper _mapper;
+        public DriverController(IDriverService driverService, IMapper mapper)
         {
             _driverService = driverService;
+            _mapper = mapper;
         }
         [HttpGet]
         public async Task<ActionResult<DriverDTO>> Get(int id)
@@ -27,12 +30,12 @@ namespace MyProject.WebAPI.Controllers
         [HttpPost]
         public async Task<DriverDTO> Post([FromBody] DriverModel driverModel)
         {
-            return await _driverService.AddAsync(new DriverDTO() {Id = driverModel.Id, FirstName = driverModel.FirstName, LastName = driverModel.LastName, Address = driverModel.Address, City = driverModel.City, Email = driverModel.Email, UserId = driverModel.UserId }) ;   
+            return await _driverService.AddAsync(_mapper.Map<DriverDTO>(driverModel)) ;   
         }
         [HttpPut]
         public async Task<DriverDTO> Update([FromBody] DriverModel driverModel)
         {
-            return await _driverService.UpdateAsync(new DriverDTO() { Id = driverModel.Id, FirstName = driverModel.FirstName, LastName = driverModel.LastName, Address = driverModel.Address, City = driverModel.City, Email = driverModel.Email, UserId = driverModel.UserId });
+            return await _driverService.UpdateAsync(_mapper.Map<DriverDTO>(driverModel));
         }
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)

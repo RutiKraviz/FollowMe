@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using MyProject.Common.DTOs;
 using MyProject.Repositories.Entities;
+using MyProject.Repositories.Interfaces;
 using MyProject.Repositories.Repositories;
-using MyProject.Services.Interraces;
+using MyProject.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,12 @@ using System.Threading.Tasks;
 
 namespace MyProject.Services.Services
 {
-    public class StationService : IStationInterface
+    public class StationService : IStationService
     {
-        private readonly StationRepository _stationRepository;
+        private readonly IStationRepository _stationRepository;
         private readonly IMapper _mapper;
 
-        public StationService(StationRepository stationRepository, IMapper mapper)
+        public StationService(IStationRepository stationRepository, IMapper mapper)
         {
             _stationRepository = stationRepository;
             _mapper = mapper;

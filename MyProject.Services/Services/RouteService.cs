@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyProject.Services.Services
 {
-    public class RouteService : IRouteInterface
+    public class RouteService : IRouteService
     {
         private readonly IRouteRepository _routeRepository;
         private readonly IMapper _mapper;
@@ -21,7 +21,7 @@ namespace MyProject.Services.Services
         }
         public async Task<RouteDTO> AddAsync(RouteDTO route)
         {
-            var stations = _mapper.Map<Station>(route.Stations);
+            var stations = _mapper.Map<List<Station>>(route.Stations);
             return _mapper.Map<RouteDTO>(await _routeRepository.AddAsync(route.Id, stations));
         }
 

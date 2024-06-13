@@ -2,7 +2,7 @@
 using MyProject.Common.DTOs;
 using MyProject.Repositories.Entities;
 using MyProject.Repositories.Interfaces;
-using MyProject.Services.Interraces;
+using MyProject.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace MyProject.Services.Services
 {
-    public class UserService : IUserInterface
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;

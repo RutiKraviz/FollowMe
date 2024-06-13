@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyProject.Common.DTOs;
-using MyProject.Services.Interraces;
+using MyProject.Services.Interfaces;
 using MyProject.WebAPI.Models;
 
 namespace MyProject.WebAPI.Controllers
@@ -9,8 +9,8 @@ namespace MyProject.WebAPI.Controllers
     [ApiController]
     public class StationController : ControllerBase
     {
-        private readonly IStationInterface _stationService;
-        public StationController(IStationInterface stationInterface)
+        private readonly IStationService _stationService;
+        public StationController(IStationService stationInterface)
         {
             _stationService = stationInterface;
         }

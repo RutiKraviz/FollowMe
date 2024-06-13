@@ -4,6 +4,6 @@
     {
         public int Id { get; set; }
 
-       List<StationModel> Stations { get; set; }
+        public List<StationModel> Stations { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace MyProject_Context.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("MyProject.Repositories.Entities.Costumer", b =>
+            modelBuilder.Entity("MyProject.Repositories.Entities.Coustemer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -48,9 +48,6 @@ namespace MyProject_Context.Migrations
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
-
-                    b.Property<string>("lastName")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -96,12 +93,6 @@ namespace MyProject_Context.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("BeginningTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Routes");
@@ -115,13 +106,18 @@ namespace MyProject_Context.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double?>("Latitude")
+                        .HasColumnType("float");
 
-                    b.Property<int>("RouteId")
+                    b.Property<double?>("Longitude")
+                        .HasColumnType("float");
+
+                    b.Property<int?>("RouteId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RouteId");
 
                     b.ToTable("Stations");
                 });
@@ -146,6 +142,18 @@ namespace MyProject_Context.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("MyProject.Repositories.Entities.Station", b =>
+                {
+                    b.HasOne("MyProject.Repositories.Entities.Route", null)
+                        .WithMany("Stations")
+                        .HasForeignKey("RouteId");
+                });
+
+            modelBuilder.Entity("MyProject.Repositories.Entities.Route", b =>
+                {
+                    b.Navigation("Stations");
                 });
 #pragma warning restore 612, 618
         }

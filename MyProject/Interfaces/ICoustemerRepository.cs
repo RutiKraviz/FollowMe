@@ -9,11 +9,12 @@ namespace MyProject.Repositories.Interfaces
 {
     public interface ICoustemerRepository
     {
-        Task<Costumer> GetByIdAsync(int id);
+        Task<Coustemer> GetByIdAsync(int id);
+        Task<Coustemer> Login(string name, string password);
 
-        Task<Costumer> AddAsync(int id, string firstName, string lastName, string address, string city, string email);
+        Task<Coustemer> AddAsync(Coustemer coustemer);
 
-        Task<Costumer> UpdateAsync(Costumer coustemer);
+        Task<Coustemer> UpdateAsync(Coustemer coustemer);
         
         Task DeleteAsync(int id);
     }

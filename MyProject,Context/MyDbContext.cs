@@ -14,7 +14,7 @@ namespace MyProject.Context
 {
     public class MyDbContext : DbContext, IContext
     {
-        public DbSet<Costumer>? Costumeres { get; set; }
+        public DbSet<Coustemer>? Costumeres { get; set; }
         public DbSet<Driver>? Driveres { get; set; }
         public DbSet<Route>? Routes { get; set; }
         public DbSet<Station>? Stations { get; set; }
@@ -30,7 +30,7 @@ namespace MyProject.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Costumer>()
+            modelBuilder.Entity<Coustemer>()
                 .Property(b => b.FirstName)
                 .IsRequired();
         }

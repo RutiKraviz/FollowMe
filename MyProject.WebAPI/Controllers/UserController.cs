@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using MyProject.Common.DTOs;
-using MyProject.Services.Interraces;
+using MyProject.Services.Interfaces;
 using MyProject.WebAPI.Models;
 
 namespace MyProject.WebAPI.Controllers
@@ -9,11 +10,13 @@ namespace MyProject.WebAPI.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserInterface _userService;
+        private readonly IUserService _userService;
+        private readonly IMapper _mapper;
 
-        public UserController(IUserInterface userService)
+        public UserController(IUserService userService, IMapper mapper)
         {
             _userService = userService;
+            _mapper = mapper;
         }
 
         [HttpGet("{id}")]
@@ -27,13 +30,13 @@ namespace MyProject.WebAPI.Controllers
         [HttpPut]
         public async Task<UserDTO> Update([FromBody] UserModel userModel)
         {
-            return await _userService.UpdateAsync(new UserDTO() { Id = userModel.Id, PassWord = userModel.PassWord, Email = userModel.Email, Role = userModel.Role });
+            return await _userService.UpdateAsync(_mapper.Map<UserDTO>(userModel));
         }
 
         [HttpPost]
         public async Task<UserDTO> Post([FromBody] UserModel userModel)
         {
-            return await _userService.AddAsync(new UserDTO() { Id = userModel.Id, Email = userModel.Email, PassWord = userModel.PassWord, Role = userModel.Role });
+            return await _userService.AddAsync(_mapper.Map<UserDTO>(userModel));
         }
 
         [HttpDelete("{id}")]

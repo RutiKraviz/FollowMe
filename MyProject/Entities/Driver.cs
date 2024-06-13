@@ -12,7 +12,7 @@ namespace MyProject.Repositories.Entities
        
         public int Id { get; set; }
 
-        public string? FirstName { get; set; }
+        public string FirstName { get; set; } = string.Empty;
 
         public string? LastName { get; set; }
 

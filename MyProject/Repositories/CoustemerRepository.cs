@@ -1,4 +1,5 @@
-﻿using MyProject.Repositories.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MyProject.Repositories.Entities;
 using MyProject.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -17,20 +18,19 @@ namespace MyProject.Repositories.Repositories
             _context = context;
         }
 
-        public async Task<Costumer> GetByIdAsync(int id)
+        public async Task<Coustemer> GetByIdAsync(int id)
         {
             return _context.Costumeres.FindAsync(id).Result;
         }
 
-        public async Task<Costumer> AddAsync(int id, string firstName, string lastName, string address, string city, string email)
+        public async Task<Coustemer> AddAsync(Coustemer coustemer)
         {
-            var c = new Costumer() { Id = id, FirstName = firstName, LastName = lastName, Address = address, City = city, Email = email };
-            _context.Costumeres.Add(c);
+            _context.Costumeres.Add(coustemer);
             await _context.SaveChangesAsync();
-            return c;
+            return coustemer;
         }
 
-        public async Task<Costumer> UpdateAsync(Costumer coustemer)
+        public async Task<Coustemer> UpdateAsync(Coustemer coustemer)
         {
             var c = GetByIdAsync(coustemer.Id).Result;
             c.Id = coustemer.Id;
@@ -47,6 +47,11 @@ namespace MyProject.Repositories.Repositories
         {
             _context.Costumeres.Remove(GetByIdAsync(id).Result);
             await _context.SaveChangesAsync();
+        }
+
+        public Task<Coustemer> Login(string name, string password)
+        {
+           return  _context.Costumeres.FirstOrDefaultAsync(x=>x.FirstName==name&&x.Email==password);
         }
     }
 }

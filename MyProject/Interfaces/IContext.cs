@@ -10,17 +10,17 @@ namespace MyProject.Repositories.Interfaces
 {
     public interface IContext
     {
-        DbSet<Costumer>? Costumeres { get; set; }
+        public DbSet<Coustemer> Costumeres { get; set; }
 
-        DbSet<Driver>? Driveres { get; set; }
+        public DbSet<Driver> Driveres { get; set; }
 
-        DbSet<Route>? Routes { get; set; }
+        public DbSet<Route> Routes { get; set; }
 
-        DbSet<Station>? Stations { get; set; }
+        public DbSet<Station> Stations { get; set; }
 
-        DbSet<User>? Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
-    
+
     }
 }
