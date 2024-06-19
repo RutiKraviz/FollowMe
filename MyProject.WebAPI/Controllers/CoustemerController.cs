@@ -13,12 +13,12 @@ namespace MyProject.WebAPI.Controllers
         private readonly ICoustemerService _costumerService;
         private readonly IMapper _mapper;
 
-        public CoustemerController(ICoustemerService coustemerInterface, IMapper mapper)
+        public CoustemerController(ICoustemerService coustemerService, IMapper mapper)
         {
-            _costumerService = coustemerInterface;
+            _costumerService = coustemerService;
             _mapper = mapper;
         }
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<ActionResult<CoustemerDTO>> Get(int id)
         {
             var coustemer = await _costumerService.GetByIdAsync(id);

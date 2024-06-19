@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using MyProject.Common.DTOs;
 using MyProject.Services.Interfaces;
 using MyProject.WebAPI.Models;
@@ -10,9 +11,11 @@ namespace MyProject.WebAPI.Controllers
     public class StationController : ControllerBase
     {
         private readonly IStationService _stationService;
-        public StationController(IStationService stationInterface)
+        private readonly IMapper _mapper;
+        public StationController(IStationService stationService, IMapper mapper)
         {
-            _stationService = stationInterface;
+            _stationService = stationService;
+            _mapper = mapper;
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<StationDTO>> Get(int id)
@@ -25,12 +28,12 @@ namespace MyProject.WebAPI.Controllers
         [HttpPost]
         public async Task<StationDTO> Post([FromBody] StationModel stationModel)
         {
-            return await _stationService.AddAsync(new StationDTO() { Id = stationModel.Id, Latitude = stationModel.Latitude, Longitude = stationModel.Longitude });
+            return await _stationService.AddAsync(_mapper.Map<StationDTO>(stationModel));
         }
         [HttpPut]
         public async Task<StationDTO> Update([FromBody] StationModel stationModle)
         {
-            return await _stationService.UpdateAsync(new StationDTO() { Id = stationModle.Id, Latitude = stationModle.Latitude, Longitude =stationModle.Longitude });
+            return await _stationService.UpdateAsync( _mapper.Map<StationDTO>(stationModle));
         }
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)

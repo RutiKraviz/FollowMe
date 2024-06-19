@@ -12,10 +12,10 @@ namespace MyProject.WebAPI.Controllers
     {
         private readonly IRouteService _routeService;
         private readonly IMapper _mapper;
-        public RouteController(IRouteService routeInterface, IMapper mapper)
+        public RouteController(IRouteService routeService, IMapper mapper)
         {
             _mapper = mapper;
-           _routeService = routeInterface;
+           _routeService = routeService;
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<RouteDTO>> Get(int id)
@@ -30,14 +30,12 @@ namespace MyProject.WebAPI.Controllers
         [HttpPost]
         public async Task<RouteDTO> Post([FromBody] RouteModel routeModel)
         {
-            RouteDTO d=_mapper.Map<RouteDTO>(routeModel);
-            return await _routeService.AddAsync(d);
+            return await _routeService.AddAsync(_mapper.Map<RouteDTO>(routeModel));
         }
         [HttpPut]
         public async Task<RouteDTO> Update([FromBody] RouteModel routeModel)
         {
-            RouteDTO d = _mapper.Map<RouteDTO>(routeModel);
-            return await _routeService.UpdateAsync(d);
+            return await _routeService.UpdateAsync(_mapper.Map<RouteDTO>(routeModel));
         }
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
