@@ -35,8 +35,7 @@ namespace MyProject.Repositories.Repositories
             var c = GetByIdAsync(coustemer.Id).Result;
             c.Id = coustemer.Id;
             c.Email = coustemer.Email;
-            c.Address = coustemer.Address;
-            c.City = coustemer.City;
+            c.FullAddress = coustemer.FullAddress;
             c.FirstName = coustemer.FirstName;
             c.LastName = coustemer.LastName;
             await _context.SaveChangesAsync();

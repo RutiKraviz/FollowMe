@@ -24,7 +24,7 @@ namespace MyProject.Services.Services
         }
         public async Task<DriverDTO> AddAsync(DriverDTO driver)
         {
-            return _mapper.Map<DriverDTO>(await _driverRepository.AddAsync(driver.Id, driver.FirstName, driver.LastName, driver.Address, driver.City, driver.Email));
+            return _mapper.Map<DriverDTO>(await _driverRepository.AddAsync(driver.Id, driver.FirstName, driver.LastName, driver.FullAddress, driver.Email));
         }
 
         public async Task DeleteAsync(int id)

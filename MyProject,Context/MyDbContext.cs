@@ -19,10 +19,7 @@ namespace MyProject.Context
         public DbSet<Route>? Routes { get; set; }
         public DbSet<Station>? Stations { get; set; }
         public DbSet<User>? Users { get; set; }
-        //  protected override void OnConfiguring(DbContextOptionsBuilder options)
-        //  {
-        //      options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=FolowMeBD;Trusted_Connection=True");
-        //  }
+      
         public MyDbContext(DbContextOptions<MyDbContext> options)
           : base(options)
         {

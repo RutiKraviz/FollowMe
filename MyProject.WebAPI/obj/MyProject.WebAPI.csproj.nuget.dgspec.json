@@ -164,6 +164,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "C:\\Users\\user1\\Desktop\\FollowMe\\MyProject,Context\\MyProject.Context.csproj": {
+                "projectPath": "C:\\Users\\user1\\Desktop\\FollowMe\\MyProject,Context\\MyProject.Context.csproj"
+              },
               "C:\\Users\\user1\\Desktop\\FollowMe\\MyProject.Common\\MyProject.Common.csproj": {
                 "projectPath": "C:\\Users\\user1\\Desktop\\FollowMe\\MyProject.Common\\MyProject.Common.csproj"
               },

@@ -11,6 +11,7 @@ namespace MyProject.Common.DTOs
         public int Id { get; set; }
 
         public string? Email { get; set; }
+
         public int PassWord { get; set; }
 
         public string? Role { get; set; }

@@ -24,7 +24,7 @@ namespace MyProject.Services.Services
         }
         public async Task<StationDTO> AddAsync(StationDTO station)
         {
-            return _mapper.Map<StationDTO>(await _stationRepository.AddAsync(station.Id, station.Latitude, station.Longitude));
+            return _mapper.Map<StationDTO>(await _stationRepository.AddAsync(station.Id, station.FullAddress));
         }
 
         public async Task DeleteAsync(int id)

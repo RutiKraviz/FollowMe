@@ -17,9 +17,9 @@ namespace MyProject.Repositories.Repositories
         {
             _context = context;
         }
-        public async Task<User> AddAsync(int id1, string email1, int passWord1, string role1)
+        public async Task<User> AddAsync(int id, string email1, int passWord1, string role1)
         {
-            var u = new User() { Id = id1, Email = email1, PassWord = passWord1, Role = role1 };
+            var u = new User() { Id = id, Email = email1, PassWord = passWord1, Role = role1 };
             _context.Users.Add(u);
             await _context.SaveChangesAsync();
             return u;

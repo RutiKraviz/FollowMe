@@ -17,9 +17,9 @@ namespace MyProject.Repositories.Repositories
         {
             _context = context;
         }
-        public async Task<Driver> AddAsync(int id, string firstName, string lastName, string address, string city, string email)
+        public async Task<Driver> AddAsync(int id, string firstName, string lastName, string fulllAddress, string email)
         {
-            var d = new Driver() { Id = id, FirstName = firstName, LastName = lastName, Address = address, City = city, Email = email};
+            var d = new Driver() { Id = id, FirstName = firstName, LastName = lastName, FullAddress = fulllAddress, Email = email};
             _context.Driveres.Add(d);
             await _context.SaveChangesAsync();
             return d;
@@ -43,9 +43,8 @@ namespace MyProject.Repositories.Repositories
             c.Id = driver.Id;
             c.FirstName = driver.FirstName;
             c.LastName = driver.LastName;
-            c.Address = driver.Address;
+            c.FullAddress = driver.FullAddress;
             c.Email = driver.Email;
-            c.City=driver.City;
             await _context.SaveChangesAsync();
             return c;
         }

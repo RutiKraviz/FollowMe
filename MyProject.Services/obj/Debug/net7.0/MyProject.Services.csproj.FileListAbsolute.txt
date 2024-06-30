@@ -59,3 +59,5 @@ C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\refint\MyPro
 C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.pdb
 C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\ref\MyProject.Services.dll
 C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.sourcelink.json
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Context.dll
+C:\Users\user1\Desktop\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Context.pdb

@@ -11,7 +11,7 @@ namespace MyProject.Repositories.Interfaces
     {
         Task<Driver> GetByIdAsync(int id);
 
-        Task<Driver> AddAsync(int id, string firstName, string lastName, string address, string city, string email);
+        Task<Driver> AddAsync(int id, string firstName, string lastName, string fullAddress, string email);
 
         Task<Driver> UpdateAsync(Driver driver);
 

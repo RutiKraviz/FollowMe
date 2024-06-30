@@ -12,7 +12,7 @@ namespace MyProject.Repositories.Interfaces
     {
         Task<Station> GetByIdAsync(int id);
 
-        Task<Station> AddAsync(int id, double latitude, double longitude);
+        Task<Station> AddAsync(int id, string fullAddress);
 
         Task<Station> UpdateAsync(Station station);
 
