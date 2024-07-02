@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using MyProject.Common.DTOs;
+using MyProject.Repositories.Entities;
 using MyProject.Services.Interfaces;
 using MyProject.WebAPI.Models;
 
@@ -30,13 +31,20 @@ namespace MyProject.WebAPI.Controllers
         [HttpPut]
         public async Task<UserDTO> Update([FromBody] UserModel userModel)
         {
-            return await _userService.UpdateAsync(_mapper.Map<UserDTO>(userModel));
+            return await _userService.UpdateAsync(new UserDTO() { Name = userModel.Name, PassWord = userModel.PassWord, Role = userModel.Role });
         }
-
+        [HttpPost("Login")]
+        public async Task<ActionResult<UserDTO>> Post(CoustemerLoginModel login)
+        {
+            var coustemer = await _userService.Login(login.Username, login.Password);
+            if (coustemer == null)
+                return NotFound();
+            return coustemer;
+        }
         [HttpPost]
         public async Task<UserDTO> Post([FromBody] UserModel userModel)
         {
-            return await _userService.AddAsync(_mapper.Map<UserDTO>(userModel));
+            return await _userService.AddAsync(new UserDTO() { Name= userModel.Name, PassWord = userModel.PassWord, Role = userModel.Role});
         }
 
         [HttpDelete("{id}")]

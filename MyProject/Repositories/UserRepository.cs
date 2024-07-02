@@ -17,9 +17,9 @@ namespace MyProject.Repositories.Repositories
         {
             _context = context;
         }
-        public async Task<User> AddAsync(int id, string email1, int passWord1, string role1)
+        public async Task<User> AddAsync(User user)
         {
-            var u = new User() { Id = id, Email = email1, PassWord = passWord1, Role = role1 };
+            var u = new User() { Id = user.Id, Name = user.Name, PassWord = user.PassWord, Role = user.Role };
             _context.Users.Add(u);
             await _context.SaveChangesAsync();
             return u;
@@ -40,10 +40,15 @@ namespace MyProject.Repositories.Repositories
         {
             var u = GetByIdAsync(user.Id).Result;
             u.Id = user.Id;
-            u.Email = user.Email;
+            u.Name = user.Name;
             u.PassWord = user.PassWord;
             await _context.SaveChangesAsync();
             return u;
+        }
+
+        public Task<User> Login(string name, string password)
+        {
+            return _context.Users.FirstOrDefaultAsync(x => x.Name == name && x.PassWord == password);
         }
     }
 }

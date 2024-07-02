@@ -14,19 +14,12 @@ namespace MyProject.Services
         {
             
             services.AddRepositories();
-            //services.AddScoped(typeof(ICoustemerService),typeof(CoustemerService));
-            //services.AddScoped(typeof(IDriverService), typeof(DriverService));
-            //services.AddScoped(typeof(IUserService), typeof(UserService));
-            //services.AddScoped(typeof(IStationService), typeof(StationService));
-            //services.AddScoped(typeof(IRouteService), typeof(RouteService));
 
-            services.AddScoped<ICoustemerService, CoustemerService>();
+            services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IDriverService, DriverService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IStationService, StationService>();
             services.AddScoped<IRouteService, RouteService>();
-
-            //services.AddDbContext<MyProject.Context.MyDbContext> ();            //var mapping = new MapperConfiguration(mc =>            //{            //    mc.AddProfile(new Mapping());            //});            //IMapper mapper = mapping.CreateMapper();            //services.AddSingleton(mapper);
 
             services.AddAutoMapper(typeof(Mapping));
 

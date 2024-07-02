@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Principal;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MyProject.Repositories.Entities
+{
+    public class CustomerDTO
+    {
+        public int? Id { get; set; }
+
+        public string FirstName { get; set; } = string.Empty;
+
+        public string LastName { get; set; }= string.Empty;
+
+        public string FullAddress { get; set; } = string.Empty;
+
+        public string Email { get; set; } = string.Empty;
+
+        public int? UserId { get; set; }
+    }
+}

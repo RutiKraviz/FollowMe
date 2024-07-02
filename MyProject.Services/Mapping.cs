@@ -13,7 +13,7 @@ namespace MyProject.Services
     {
         public Mapping() 
         {
-            CreateMap<Coustemer, CoustemerDTO>().ReverseMap();
+            CreateMap<Customer, CustomerDTO>().ReverseMap();
             CreateMap<Driver, DriverDTO>().ReverseMap();
             CreateMap<Route, RouteDTO>().ReverseMap();
             CreateMap<Station, StationDTO>().ReverseMap();

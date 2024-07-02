@@ -2,6 +2,7 @@
 using MyProject.Common.DTOs;
 using MyProject.Repositories.Entities;
 using MyProject.Repositories.Interfaces;
+using MyProject.Repositories.Repositories;
 using MyProject.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace MyProject.Services.Services
         }
         public async Task<UserDTO> AddAsync(UserDTO user)
         {
-            return _mapper.Map<UserDTO>(await _userRepository.AddAsync(user.Id, user.Email, user.PassWord, user.Role));
+            return _mapper.Map<UserDTO>(await _userRepository.AddAsync(_mapper.Map<User>(user)));
         }
 
         public async Task DeleteAsync(int id)
@@ -40,6 +41,11 @@ namespace MyProject.Services.Services
         public async Task<UserDTO> UpdateAsync(UserDTO user)
         {
             return _mapper.Map<UserDTO>(await _userRepository.UpdateAsync(_mapper.Map<User>(user)));
+        }
+
+        public async Task<UserDTO> Login(string name, string password)
+        {
+            return _mapper.Map<UserDTO>(await _userRepository.Login(name, password));
         }
     }
 }

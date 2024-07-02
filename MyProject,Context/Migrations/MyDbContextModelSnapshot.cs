@@ -22,7 +22,7 @@ namespace MyProject_Context.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("MyProject.Repositories.Entities.Coustemer", b =>
+            modelBuilder.Entity("MyProject.Repositories.Entities.Customer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -48,7 +48,7 @@ namespace MyProject_Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Costumeres");
+                    b.ToTable("Custumeres");
                 });
 
             modelBuilder.Entity("MyProject.Repositories.Entities.Driver", b =>
@@ -123,11 +123,11 @@ namespace MyProject_Context.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PassWord")
-                        .HasColumnType("int");
+                    b.Property<string>("PassWord")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Role")
                         .HasColumnType("nvarchar(max)");

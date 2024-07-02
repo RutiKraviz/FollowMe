@@ -11,10 +11,12 @@ namespace MyProject.Repositories.Interfaces
     {
         Task<User> GetByIdAsync(int id);
 
-        Task<User> AddAsync(int id, string email, int passWord, string role);
+        Task<User> AddAsync(User user);
 
         Task<User> UpdateAsync(User user);
 
         Task DeleteAsync(int id);
+
+        Task<User> Login(string name, string password);
     }
 }

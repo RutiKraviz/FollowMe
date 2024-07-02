@@ -10,7 +10,7 @@ namespace MyProject.Repositories.Interfaces
 {
     public interface IContext
     {
-        public DbSet<Coustemer> Costumeres { get; set; }
+        public DbSet<Customer> Custumeres { get; set; }
 
         public DbSet<Driver> Driveres { get; set; }
 

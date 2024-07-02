@@ -30,12 +30,12 @@ namespace MyProject.WebAPI.Controllers
         [HttpPost]
         public async Task<DriverDTO> Post([FromBody] DriverModel driverModel)
         {
-            return await _driverService.AddAsync(_mapper.Map<DriverDTO>(driverModel)) ;   
+            return await _driverService.AddAsync(new DriverDTO() { FirstName = driverModel.FirstName, LastName = driverModel.LastName, FullAddress=driverModel.FullAddress, Email=driverModel.Email}) ;   
         }
         [HttpPut]
         public async Task<DriverDTO> Update([FromBody] DriverModel driverModel)
         {
-            return await _driverService.UpdateAsync(_mapper.Map<DriverDTO>(driverModel));
+            return await _driverService.UpdateAsync(new DriverDTO() { FirstName = driverModel.FirstName, LastName = driverModel.LastName, FullAddress = driverModel.FullAddress, Email = driverModel.Email });
         }
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)

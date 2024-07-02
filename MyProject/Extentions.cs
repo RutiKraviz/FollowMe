@@ -13,7 +13,7 @@ namespace MyProject.Repositories
     {
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
-            services.AddScoped<ICoustemerRepository, CoustemerRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IDriverRepository, DriverRepository>();
             services.AddScoped<IRouteRepository, RouteRepository>();
             services.AddScoped<IStationRepository, StationRepository>();

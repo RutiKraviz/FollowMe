@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using MyProject.Common.DTOs;
 using MyProject.Repositories.Entities;
 using MyProject.Repositories.Interfaces;
 using MyProject.WebAPI.Models;
@@ -30,12 +31,16 @@ namespace MyProject.WebAPI.Controllers
         [HttpPost]
         public async Task<RouteDTO> Post([FromBody] RouteModel routeModel)
         {
-            return await _routeService.AddAsync(_mapper.Map<RouteDTO>(routeModel));
+            List<StationDTO> stations = routeModel.Stations.Select(s => new StationDTO { FullAddress = s.FullAddress }).ToList();
+            RouteDTO routeDTO = new RouteDTO { Stations = stations };
+            return await _routeService.AddAsync(routeDTO);
         }
         [HttpPut]
         public async Task<RouteDTO> Update([FromBody] RouteModel routeModel)
         {
-            return await _routeService.UpdateAsync(_mapper.Map<RouteDTO>(routeModel));
+            List<StationDTO> stations = routeModel.Stations.Select(s => new StationDTO { FullAddress = s.FullAddress }).ToList();
+            RouteDTO routeDTO = new RouteDTO { Stations = stations };
+            return await _routeService.UpdateAsync(routeDTO);
         }
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
