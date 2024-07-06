@@ -51,7 +51,7 @@ namespace MyProject_Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Custumeres");
+                    b.ToTable("Customers");
                 });
 
             modelBuilder.Entity("MyProject.Repositories.Entities.Driver", b =>
@@ -80,7 +80,7 @@ namespace MyProject_Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Driveres");
+                    b.ToTable("Drivers");
                 });
 
             modelBuilder.Entity("MyProject.Repositories.Entities.Route", b =>

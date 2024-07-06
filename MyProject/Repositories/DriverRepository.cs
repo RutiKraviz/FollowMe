@@ -20,20 +20,20 @@ namespace MyProject.Repositories.Repositories
         public async Task<Driver> AddAsync(int id, string firstName, string lastName, string fulllAddress, string email)
         {
             var d = new Driver() { Id = id, FirstName = firstName, LastName = lastName, FullAddress = fulllAddress, Email = email};
-            _context.Driveres.Add(d);
+            _context.Drivers.Add(d);
             await _context.SaveChangesAsync();
             return d;
         }
 
         public async Task DeleteAsync(int id)
         {
-            _context.Driveres.Remove(GetByIdAsync(id).Result);
+            _context.Drivers.Remove(GetByIdAsync(id).Result);
             await _context.SaveChangesAsync();
         }
 
         public async Task<Driver> GetByIdAsync(int id)
         {
-            return _context.Driveres.FindAsync(id).Result;
+            return _context.Drivers.FindAsync(id).Result;
 
         }
 

@@ -9,7 +9,7 @@ namespace MyProject.Repositories.Entities
 {
     public class Customer
     {
-        //public int CoustemerCode { get; set; }
+        //public int CustomerCode { get; set; }
         public int Id { get; set; }
 
         public string FirstName { get; set; } = string.Empty;

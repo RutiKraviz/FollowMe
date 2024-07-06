@@ -48,3 +48,16 @@ C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\refint\MyProject.Repo
 C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.pdb
 C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\ref\MyProject.Repositories.dll
 C:\Users\user1\Desktop\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.sourcelink.json
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\bin\Debug\net6.0\MyProject.Repositories.deps.json
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\bin\Debug\net6.0\MyProject.Repositories.dll
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\bin\Debug\net6.0\MyProject.Repositories.pdb
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.csproj.AssemblyReference.cache
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.AssemblyInfoInputs.cache
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.AssemblyInfo.cs
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.sourcelink.json
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.dll
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\obj\Debug\net6.0\refint\MyProject.Repositories.dll
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\obj\Debug\net6.0\MyProject.Repositories.pdb
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject\obj\Debug\net6.0\ref\MyProject.Repositories.dll

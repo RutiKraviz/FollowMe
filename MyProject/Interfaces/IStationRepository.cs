@@ -11,8 +11,9 @@ namespace MyProject.Repositories.Interfaces
     public interface IStationRepository
     {
         Task<Station> GetByIdAsync(int id);
+        Task<List<Station>> GetByRouteIdAsync(int routeId);
 
-        Task<Station> AddAsync(int id, string fullAddress);
+        Task<Station> AddAsync(int id, string fullAddress, int RouteId, string Lan, string Tan);
 
         Task<Station> UpdateAsync(Station station);
 

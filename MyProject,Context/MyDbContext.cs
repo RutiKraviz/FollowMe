@@ -14,8 +14,8 @@ namespace MyProject.Context
 {
     public class MyDbContext : DbContext, IContext
     {
-        public DbSet<Customer>? Custumeres { get; set; }
-        public DbSet<Driver>? Driveres { get; set; }
+        public DbSet<Customer>? Customers { get; set; }
+        public DbSet<Driver>? Drivers { get; set; }
         public DbSet<Route>? Routes { get; set; }
         public DbSet<Station>? Stations { get; set; }
         public DbSet<User>? Users { get; set; }

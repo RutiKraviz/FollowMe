@@ -1,10 +1,8 @@
 ﻿using MyProject.Repositories.Entities;
 using MyProject.Repositories.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace MyProject.Repositories.Repositories
 {
@@ -14,7 +12,7 @@ namespace MyProject.Repositories.Repositories
 
         public RouteRepository(IContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public async Task<Route> AddAsync(int id, List<Station> stations)
@@ -27,22 +25,29 @@ namespace MyProject.Repositories.Repositories
 
         public async Task DeleteAsync(int id)
         {
-            _context.Routes.Remove(GetByIdAsync(id).Result);
-            await _context.SaveChangesAsync();
+            var route = await GetByIdAsync(id);
+            if (route != null)
+            {
+                _context.Routes.Remove(route);
+                await _context.SaveChangesAsync();
+            }
         }
 
         public async Task<Route> GetByIdAsync(int id)
         {
-            return _context.Routes.FindAsync(id).Result;
+            return await _context.Routes.Include(r => r.Stations)
+                                        .FirstOrDefaultAsync(r => r.Id == id);
         }
 
         public async Task<Route> UpdateAsync(Route route)
         {
-            var r = GetByIdAsync(route.Id).Result;
-            r.Id = route.Id;
-            r.Stations = route.Stations;
-            await _context.SaveChangesAsync();
-            return r;
+            var existingRoute = await GetByIdAsync(route.Id);
+            if (existingRoute != null)
+            {
+                existingRoute.Stations = route.Stations;
+                await _context.SaveChangesAsync();
+            }
+            return existingRoute;
         }
     }
 }

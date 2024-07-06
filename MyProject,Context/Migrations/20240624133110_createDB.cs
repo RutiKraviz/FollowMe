@@ -28,7 +28,7 @@ namespace MyProject_Context.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Driveres",
+                name: "Drivers",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -41,7 +41,7 @@ namespace MyProject_Context.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Driveres", x => x.Id);
+                    table.PrimaryKey("PK_Drivers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -103,7 +103,7 @@ namespace MyProject_Context.Migrations
                 name: "Costumeres");
 
             migrationBuilder.DropTable(
-                name: "Driveres");
+                name: "Drivers");
 
             migrationBuilder.DropTable(
                 name: "Stations");

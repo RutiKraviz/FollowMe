@@ -1,4 +1,5 @@
-﻿using MyProject.Repositories.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MyProject.Repositories.Entities;
 using MyProject.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,9 @@ namespace MyProject.Repositories.Repositories
             _context = context;
         }
 
-        public async Task<Station> AddAsync(int id, string fullAddress)
+        public async Task<Station> AddAsync(int id, string fullAddress, int routeId, string lan, string lat)
         {
-            var s = new Station() { Id = id, FullAddress = fullAddress };
+            var s = new Station() { Id = id, FullAddress = fullAddress, RouteId = routeId , Lan=lan, Lat=lat };
             _context.Stations.Add(s);
             await _context.SaveChangesAsync();
             return s;
@@ -34,6 +35,12 @@ namespace MyProject.Repositories.Repositories
         {
             return _context.Stations.FindAsync(id).Result;
         }
+
+        public async Task<List<Station>> GetByRouteIdAsync(int routeId)
+        {
+            return await _context.Stations.Where(s => s.RouteId == routeId).ToListAsync();
+        }
+
 
         public async Task<Station> UpdateAsync(Station station)
         {

@@ -13,26 +13,26 @@ namespace MyProject.WebAPI.Controllers
         private readonly ICustomerService _customerService;
         private readonly IMapper _mapper;
 
-        public CustomerController(ICustomerService coustemerService, IMapper mapper)
+        public CustomerController(ICustomerService CustomerService, IMapper mapper)
         {
-            _customerService = coustemerService;
+            _customerService = CustomerService;
             _mapper = mapper;
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<CustomerDTO>> Get(int id)
         {
-            var coustemer = await _customerService.GetByIdAsync(id);
-            if (coustemer == null)
+            var Customer = await _customerService.GetByIdAsync(id);
+            if (Customer == null)
                 return NotFound();
-            return coustemer;
+            return Customer;
         }
         //[HttpPost("Login")]
-        //public async Task<ActionResult<CoustemerDTO>> Post(CoustemerLoginModel login)
+        //public async Task<ActionResult<CustomerDTO>> Post(CustomerLoginModel login)
         //{
-        //    var coustemer = await _customerService.Login(login.Username, login.Password);
-        //    if (coustemer == null)
+        //    var Customer = await _customerService.Login(login.Username, login.Password);
+        //    if (Customer == null)
         //        return NotFound();
-        //    return coustemer;
+        //    return Customer;
         //}
         [HttpPost]
         public async Task<CustomerDTO> Post([FromBody] CustomerModel coustemrModel)

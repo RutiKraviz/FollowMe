@@ -61,3 +61,23 @@ C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\ref\MyProjec
 C:\Users\user1\Desktop\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.sourcelink.json
 C:\Users\user1\Desktop\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Context.dll
 C:\Users\user1\Desktop\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Context.pdb
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Services.deps.json
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Services.dll
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Services.pdb
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Common.dll
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Context.dll
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Repositories.dll
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Context.pdb
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Common.pdb
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\bin\Debug\net7.0\MyProject.Repositories.pdb
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.AssemblyReference.cache
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.AssemblyInfoInputs.cache
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.AssemblyInfo.cs
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.CoreCompileInputs.cache
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.sourcelink.json
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.csproj.CopyComplete
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.dll
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\obj\Debug\net7.0\refint\MyProject.Services.dll
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\obj\Debug\net7.0\MyProject.Services.pdb
+C:\Users\חיה\OneDrive\שולחן העבודה\חיה\C# Project\FollowMe2\FollowMe\MyProject.Services\obj\Debug\net7.0\ref\MyProject.Services.dll

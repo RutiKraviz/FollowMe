@@ -35,14 +35,14 @@ namespace MyProject.Services.Services
             return _mapper.Map<CustomerDTO>(await _customerRepository.GetByIdAsync(id));
         }
 
-        //public async Task<CoustemerDTO> Login(string name, string password)
+        //public async Task<CustomerDTO> Login(string name, string password)
         //{
-        //    return _mapper.Map<CoustemerDTO>(await _coustemerRepository.Login(name,password));
+        //    return _mapper.Map<CustomerDTO>(await _CustomerRepository.Login(name,password));
         //}
 
-        public async Task<CustomerDTO> UpdateAsync(CustomerDTO coustemer)
+        public async Task<CustomerDTO> UpdateAsync(CustomerDTO Customer)
         {
-            return _mapper.Map<CustomerDTO>(await _customerRepository.UpdateAsync(_mapper.Map<Customer>(coustemer)));
+            return _mapper.Map<CustomerDTO>(await _customerRepository.UpdateAsync(_mapper.Map<Customer>(Customer)));
         }
     }
 }

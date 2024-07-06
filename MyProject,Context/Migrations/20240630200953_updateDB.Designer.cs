@@ -25,7 +25,7 @@ namespace MyProject_Context.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("MyProject.Repositories.Entities.Coustemer", b =>
+            modelBuilder.Entity("MyProject.Repositories.Entities.Customer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -80,7 +80,7 @@ namespace MyProject_Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Driveres");
+                    b.ToTable("Drivers");
                 });
 
             modelBuilder.Entity("MyProject.Repositories.Entities.Route", b =>

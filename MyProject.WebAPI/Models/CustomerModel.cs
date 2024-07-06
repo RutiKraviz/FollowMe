@@ -14,7 +14,7 @@
 
         public int UserId { get; set; }
     }
-    public class CoustemerLoginModel
+    public class CustomerLoginModel
     {
         public string Username { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;

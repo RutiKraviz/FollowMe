@@ -14,7 +14,7 @@ namespace MyProject_Context.Migrations
                 name: "Costumeres");
 
             migrationBuilder.CreateTable(
-                name: "Custumeres",
+                name: "Customers",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -27,7 +27,7 @@ namespace MyProject_Context.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Custumeres", x => x.Id);
+                    table.PrimaryKey("PK_Customers", x => x.Id);
                 });
         }
 
@@ -35,10 +35,10 @@ namespace MyProject_Context.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Custumeres");
+                name: "Customers");
 
             migrationBuilder.CreateTable(
-                name: "Costumeres",
+                name: "Customers",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)

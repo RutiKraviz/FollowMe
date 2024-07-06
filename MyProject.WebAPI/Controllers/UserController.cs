@@ -34,12 +34,12 @@ namespace MyProject.WebAPI.Controllers
             return await _userService.UpdateAsync(new UserDTO() { Name = userModel.Name, PassWord = userModel.PassWord, Role = userModel.Role });
         }
         [HttpPost("Login")]
-        public async Task<ActionResult<UserDTO>> Post(CoustemerLoginModel login)
+        public async Task<ActionResult<UserDTO>> Post(CustomerLoginModel login)
         {
-            var coustemer = await _userService.Login(login.Username, login.Password);
-            if (coustemer == null)
+            var Customer = await _userService.Login(login.Username, login.Password);
+            if (Customer == null)
                 return NotFound();
-            return coustemer;
+            return Customer;
         }
         [HttpPost]
         public async Task<UserDTO> Post([FromBody] UserModel userModel)

@@ -10,11 +10,11 @@ namespace MyProject.Repositories.Interfaces
     public interface ICustomerRepository
     {
         Task<Customer> GetByIdAsync(int id);
-        //Task<Coustemer> Login(string name, string password);
+        //Task<Customer> Login(string name, string password);
 
-        Task<Customer> AddAsync(Customer coustemer);
+        Task<Customer> AddAsync(Customer Customer);
 
-        Task<Customer> UpdateAsync(Customer coustemer);
+        Task<Customer> UpdateAsync(Customer Customer);
         
         Task DeleteAsync(int id);
     }

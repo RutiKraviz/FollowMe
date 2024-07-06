@@ -12,15 +12,15 @@ using MyProject.Context;
 namespace MyProject_Context.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20240702182231_cangeUser")]
-    partial class cangeUser
+    [Migration("20240703200937_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.19")
+                .HasAnnotation("ProductVersion", "8.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -51,7 +51,7 @@ namespace MyProject_Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Costumeres");
+                    b.ToTable("Customers");
                 });
 
             modelBuilder.Entity("MyProject.Repositories.Entities.Driver", b =>
