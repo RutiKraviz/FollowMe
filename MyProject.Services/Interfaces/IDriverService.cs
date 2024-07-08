@@ -1,21 +1,15 @@
 ﻿using MyProject.Common.DTOs;
-using MyProject.Repositories.Entities;
-using System;
+using MyProject.Repositories.Entities.MyProject.Repositories.Entities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MyProject.Services.Interfaces
 {
     public interface IDriverService
     {
-        Task<DriverDTO> GetByIdAsync(int id);
-
-        Task<DriverDTO> AddAsync(DriverDTO driver);
-
-        Task<DriverDTO> UpdateAsync(DriverDTO driver);
-
-        Task DeleteAsync(int id);
+        Task<DriverDTO> GetByIdAsync(int userId);
+        Task<DriverDTO> AddAsync(DriverDTO driverModel);
+        Task<DriverDTO> UpdateAsync(DriverDTO driverModel);
+        Task DeleteAsync(int userId);
     }
 }

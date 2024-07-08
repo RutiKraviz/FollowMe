@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MyProject.Common.DTOs;
 using MyProject.Repositories.Entities;
+using MyProject.Repositories.Entities.MyProject.Repositories.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,13 @@ namespace MyProject.Services
     {
         public Mapping() 
         {
+
+            CreateMap<User, UserDTO>().ReverseMap();
             CreateMap<Customer, CustomerDTO>().ReverseMap();
             CreateMap<Driver, DriverDTO>().ReverseMap();
             CreateMap<Route, RouteDTO>().ReverseMap();
             CreateMap<Station, StationDTO>().ReverseMap();
-            CreateMap<User, UserDTO>().ReverseMap();
+
         }
     }
 }

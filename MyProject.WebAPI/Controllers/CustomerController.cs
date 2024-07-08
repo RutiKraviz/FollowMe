@@ -1,54 +1,74 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using MyProject.Repositories.Entities;
-using MyProject.Repositories.Interfaces;
+using MyProject.Common.DTOs;
+using MyProject.Services.Interfaces;
 using MyProject.WebAPI.Models;
 
-namespace MyProject.WebAPI.Controllers
+[ApiController]
+[Route("api/[controller]")]
+public class CustomerController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CustomerController : ControllerBase
-    {
-        private readonly ICustomerService _customerService;
-        private readonly IMapper _mapper;
+    private readonly ICustomerService _customerService;
+    private readonly IMapper _mapper;
 
-        public CustomerController(ICustomerService CustomerService, IMapper mapper)
+    public CustomerController(ICustomerService customerService, IMapper mapper)
+    {
+        _customerService = customerService;
+        _mapper = mapper;
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<CustomerDTO>> Get(int id)
+    {
+        try
         {
-            _customerService = CustomerService;
-            _mapper = mapper;
+            var customer = await _customerService.GetByIdAsync(id);
+            return Ok(customer);
         }
-        [HttpGet("{id}")]
-        public async Task<ActionResult<CustomerDTO>> Get(int id)
+        catch (InvalidOperationException ex)
         {
-            var Customer = await _customerService.GetByIdAsync(id);
-            if (Customer == null)
-                return NotFound();
-            return Customer;
+            return NotFound(ex.Message);
         }
-        //[HttpPost("Login")]
-        //public async Task<ActionResult<CustomerDTO>> Post(CustomerLoginModel login)
-        //{
-        //    var Customer = await _customerService.Login(login.Username, login.Password);
-        //    if (Customer == null)
-        //        return NotFound();
-        //    return Customer;
-        //}
-        [HttpPost]
-        public async Task<CustomerDTO> Post([FromBody] CustomerModel coustemrModel)
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<CustomerDTO>> Post([FromBody] CustomerModel customerModel)
+    {
+        var customerDto = _mapper.Map<CustomerDTO>(new CustomerDTO()
         {
-            return await _customerService.AddAsync(new CustomerDTO() { FirstName = coustemrModel.FirstName, LastName = coustemrModel.LastName, FullAddress = coustemrModel.FullAddress, Email = coustemrModel.Email});
-        }
-        [HttpPut]
-        public async Task<CustomerDTO> Update([FromBody] CustomerModel coustemrModel)
+            Id = customerModel.Id,
+            FirstName = customerModel.FirstName,
+            LastName = customerModel.LastName,
+            Email = customerModel.Email,
+            PassWord = customerModel.PassWord,
+            RoleId = 2,
+            StationId = customerModel.StationId,
+        });
+        var addedCustomer = await _customerService.AddAsync(customerDto);
+        return CreatedAtAction(nameof(Get), new { id = addedCustomer.Id }, addedCustomer);
+    }
+
+    [HttpPut]
+    public async Task<ActionResult<CustomerDTO>> Update([FromBody] CustomerModel customerModel)
+    {
+        var customerDto = _mapper.Map<CustomerDTO>(new CustomerDTO()
         {
-            return await _customerService.UpdateAsync(new CustomerDTO() { FirstName = coustemrModel.FirstName, LastName = coustemrModel.LastName, FullAddress = coustemrModel.FullAddress, Email = coustemrModel.Email });
-        }
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
-        {
-            await _customerService.DeleteAsync(id);
-            return NoContent();
-        }
+            Id = customerModel.Id,
+            FirstName = customerModel.FirstName,
+            LastName = customerModel.LastName,
+            Email = customerModel.Email,
+            PassWord = customerModel.PassWord,
+            RoleId = 2,
+            StationId = customerModel.StationId,
+        });
+        var updatedCustomer = await _customerService.UpdateAsync(customerDto);
+        return Ok(updatedCustomer);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _customerService.DeleteAsync(id);
+        return NoContent();
     }
 }

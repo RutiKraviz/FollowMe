@@ -1,51 +1,62 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using MyProject.Common.DTOs;
 using MyProject.Repositories.Entities;
-using MyProject.Repositories.Interfaces;
-using MyProject.Repositories.Repositories;
 using MyProject.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MyProject.Services.Services
+public class UserService : IUserService
 {
-    public class UserService : IUserService
+    private readonly IUserRepository _userRepository;
+    private readonly IMapper _mapper;
+    private readonly MyDbContext _context;
+
+    public UserService(IUserRepository userRepository, IMapper mapper, MyDbContext context)
     {
-        private readonly IUserRepository _userRepository;
-        private readonly IMapper _mapper;
+        _userRepository = userRepository;
+        _mapper = mapper;
+        _context = context;
+    }
 
-        public UserService(IUserRepository userRepository, IMapper mapper)
-        {
-            _userRepository = userRepository;
-            _mapper = mapper;
-        }
-        public async Task<UserDTO> AddAsync(UserDTO user)
-        {
-            return _mapper.Map<UserDTO>(await _userRepository.AddAsync(_mapper.Map<User>(user)));
-        }
+    public async Task<UserDTO> AddAsync(UserDTO userDto)
+    {
+        var user = _mapper.Map<User>(userDto);
 
-        public async Task DeleteAsync(int id)
+        // Detach any existing instances with the same primary key
+        var existingUser = await _context.Users.FindAsync(user.Id);
+        if (existingUser != null)
         {
-            await _userRepository.DeleteAsync(id);
+            _context.Entry(existingUser).State = EntityState.Detached;
         }
 
-        public async Task<UserDTO> GetByIdAsync(int id)
+        return _mapper.Map<UserDTO>(await _userRepository.AddAsync(user));
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        await _userRepository.DeleteAsync(id);
+    }
+
+    public async Task<UserDTO> GetByIdAsync(int id)
+    {
+        return _mapper.Map<UserDTO>(await _userRepository.GetByIdAsync(id));
+    }
+
+    public async Task<UserDTO> UpdateAsync(UserDTO userDto)
+    {
+        var user = _mapper.Map<User>(userDto);
+
+        // Detach any existing instances with the same primary key
+        var existingUser = await _context.Users.FindAsync(user.Id);
+        if (existingUser != null)
         {
-           return _mapper.Map<UserDTO>(await _userRepository.GetByIdAsync(id));
+            _context.Entry(existingUser).State = EntityState.Detached;
         }
 
-        public async Task<UserDTO> UpdateAsync(UserDTO user)
-        {
-            return _mapper.Map<UserDTO>(await _userRepository.UpdateAsync(_mapper.Map<User>(user)));
-        }
+        return _mapper.Map<UserDTO>(await _userRepository.UpdateAsync(user));
+    }
 
-        public async Task<UserDTO> Login(string name, string password)
-        {
-            return _mapper.Map<UserDTO>(await _userRepository.Login(name, password));
-        }
+    public async Task<UserDTO> Login(string name, string password)
+    {
+        return _mapper.Map<UserDTO>(await _userRepository.Login(name, password));
     }
 }

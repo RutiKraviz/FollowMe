@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MyProject.Context;
 
 #nullable disable
 
@@ -27,31 +26,34 @@ namespace MyProject_Context.Migrations
 
             modelBuilder.Entity("MyProject.Repositories.Entities.Customer", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
 
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullAddress")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
+                    b.Property<int>("StationId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    //b.Property<string>("Email")
+                    //    .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("Costumeres");
+                    //b.Property<string>("FirstName")
+                    //    .IsRequired()
+                    //    .HasColumnType("nvarchar(max)");
+
+                    //b.Property<string>("FullAddress")
+                    //    .HasColumnType("nvarchar(max)");
+
+                    //b.Property<string>("LastName")
+                    //    .HasColumnType("nvarchar(max)");
+
+                    //b.Property<int>("UserId")
+                    //    .HasColumnType("int");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("Costumers");
                 });
 
             modelBuilder.Entity("MyProject.Repositories.Entities.Driver", b =>

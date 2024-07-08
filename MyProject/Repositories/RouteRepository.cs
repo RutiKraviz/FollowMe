@@ -15,9 +15,9 @@ namespace MyProject.Repositories.Repositories
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<Route> AddAsync(int id, List<Station> stations)
+        public async Task<Route> AddAsync(int id, List<Station> stations,string startTime)
         {
-            var r = new Route() { Id = id, Stations = stations };
+            var r = new Route() { Id = id, Stations = stations, StartTime = startTime };
             _context.Routes.Add(r);
             await _context.SaveChangesAsync();
             return r;

@@ -1,48 +1,84 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using MyProject.Common.DTOs;
 using MyProject.Repositories.Entities;
 using MyProject.Repositories.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
+using MyProject.Services.Interfaces;
 
-namespace MyProject.Services.Services
+public class CustomerService : ICustomerService
 {
-    public class CustomerService : ICustomerService
+    private readonly IUserRepository _userRepository;
+    private readonly ICustomerRepository _customerRepository;
+    private readonly IMapper _mapper;
+    private readonly MyDbContext _context;
+
+    public CustomerService(IUserRepository userRepository, ICustomerRepository customerRepository, IMapper mapper, MyDbContext context)
     {
-        private readonly ICustomerRepository _customerRepository;
-        private readonly IMapper _mapper;
+        _userRepository = userRepository;
+        _customerRepository = customerRepository;
+        _mapper = mapper;
+        _context = context;
+    }
 
-        public CustomerService(ICustomerRepository custemerRepository, IMapper mapper)
+    public async Task<CustomerDTO> GetByIdAsync(int userId)
+    {
+        var customer = await _customerRepository.GetByIdAsync(userId);
+        if (customer == null)
         {
-            _customerRepository = custemerRepository;
-            _mapper = mapper;
+            throw new InvalidOperationException("Customer not found");
         }
-        public async Task<CustomerDTO> AddAsync(CustomerDTO costumer)
+        return _mapper.Map<CustomerDTO>(customer);
+    }
+
+    public async Task<CustomerDTO> AddAsync(CustomerDTO customerDto)
+    {
+        var user = _mapper.Map<User>(customerDto);
+
+        // Detach any existing instances with the same primary key
+        var existingUser = await _context.Users.FindAsync(user.Id);
+        if (existingUser != null)
         {
-            return _mapper.Map<CustomerDTO>(await _customerRepository.AddAsync(_mapper.Map<Customer>(costumer)));
+            _context.Entry(existingUser).State = EntityState.Detached;
         }
 
-        public async Task DeleteAsync(int id)
+        await _userRepository.AddAsync(user);
+
+        var customer = new Customer
         {
-            await _customerRepository.DeleteAsync(id);
+            Id = user.Id, // Ensure the same Id
+            StationId = customerDto.StationId
+        };
+
+        var existingCustomer = await _context.Customers.FindAsync(customer.Id);
+        if (existingCustomer != null)
+        {
+            _context.Entry(existingCustomer).State = EntityState.Detached;
         }
 
-        public async Task<CustomerDTO> GetByIdAsync(int id)
+        await _customerRepository.AddAsync(customer);
+
+        return _mapper.Map<CustomerDTO>(customer);
+    }
+
+    public async Task<CustomerDTO> UpdateAsync(CustomerDTO customerDto)
+    {
+        var customer = _mapper.Map<Customer>(customerDto);
+
+        // Detach any existing instances with the same primary key
+        var existingCustomer = await _context.Customers.FindAsync(customer.Id);
+        if (existingCustomer != null)
         {
-            return _mapper.Map<CustomerDTO>(await _customerRepository.GetByIdAsync(id));
+            _context.Entry(existingCustomer).State = EntityState.Detached;
         }
 
-        //public async Task<CustomerDTO> Login(string name, string password)
-        //{
-        //    return _mapper.Map<CustomerDTO>(await _CustomerRepository.Login(name,password));
-        //}
+        await _userRepository.UpdateAsync(customer);
+        await _customerRepository.UpdateAsync(customer);
+        return _mapper.Map<CustomerDTO>(customer);
+    }
 
-        public async Task<CustomerDTO> UpdateAsync(CustomerDTO Customer)
-        {
-            return _mapper.Map<CustomerDTO>(await _customerRepository.UpdateAsync(_mapper.Map<Customer>(Customer)));
-        }
+    public async Task DeleteAsync(int userId)
+    {
+        await _customerRepository.DeleteAsync(userId);
+        await _userRepository.DeleteAsync(userId);
     }
 }

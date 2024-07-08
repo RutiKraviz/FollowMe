@@ -1,52 +1,36 @@
-﻿using MyProject.Repositories.Entities;
+﻿using MyProject.Repositories.Entities.MyProject.Repositories.Entities;
 using MyProject.Repositories.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MyProject.Repositories.Repositories
+public class DriverRepository : IDriverRepository
 {
-    public class DriverRepository : IDriverRepository
+    private readonly IContext _context;
+
+    public DriverRepository(IContext context)
     {
-        private readonly IContext _context;
+        _context = context;
+    }
 
-        public DriverRepository(IContext context)
-        {
-            _context = context;
-        }
-        public async Task<Driver> AddAsync(int id, string firstName, string lastName, string fulllAddress, string email)
-        {
-            var d = new Driver() { Id = id, FirstName = firstName, LastName = lastName, FullAddress = fulllAddress, Email = email};
-            _context.Drivers.Add(d);
-            await _context.SaveChangesAsync();
-            return d;
-        }
+    public async Task<Driver> GetByIdAsync(int id)
+    {
+        return await _context.Drivers.FindAsync(id);
+    }
 
-        public async Task DeleteAsync(int id)
-        {
-            _context.Drivers.Remove(GetByIdAsync(id).Result);
-            await _context.SaveChangesAsync();
-        }
+    public async Task AddAsync(Driver driver)
+    {
+        _context.Drivers.Add(driver);
+        await _context.SaveChangesAsync();
+    }
 
-        public async Task<Driver> GetByIdAsync(int id)
-        {
-            return _context.Drivers.FindAsync(id).Result;
+    public async Task UpdateAsync(Driver driver)
+    {
+        _context.Drivers.Update(driver);
+        await _context.SaveChangesAsync();
+    }
 
-        }
-
-        public async Task<Driver> UpdateAsync(Driver driver)
-        {
-            var c = GetByIdAsync(driver.Id).Result;
-            c.Id = driver.Id;
-            c.FirstName = driver.FirstName;
-            c.LastName = driver.LastName;
-            c.FullAddress = driver.FullAddress;
-            c.Email = driver.Email;
-            await _context.SaveChangesAsync();
-            return c;
-        }
+    public async Task DeleteAsync(int id)
+    {
+        var driver = await GetByIdAsync(id);
+        _context.Drivers.Remove(driver);
+        await _context.SaveChangesAsync();
     }
 }

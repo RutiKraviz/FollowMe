@@ -24,7 +24,7 @@ namespace MyProject.Services.Services
         {
             if (route == null) throw new ArgumentNullException(nameof(route));
             var stations = _mapper.Map<List<Station>>(route.Stations);
-            return _mapper.Map<RouteDTO>(await _routeRepository.AddAsync(route.Id, stations));
+            return _mapper.Map<RouteDTO>(await _routeRepository.AddAsync(route.Id, stations, route.StartTime));
         }
 
         public async Task DeleteAsync(int id)

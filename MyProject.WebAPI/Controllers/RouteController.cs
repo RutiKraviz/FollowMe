@@ -45,7 +45,7 @@ namespace MyProject.WebAPI.Controllers
         public async Task<ActionResult<RouteDTO>> Post([FromBody] RouteModel routeModel)
         {
             // Create the route and add it to the database
-            RouteDTO routeDTO = new RouteDTO();
+            RouteDTO routeDTO = new RouteDTO() { Id = routeModel.Id, StartTime = routeModel.StartTime};
             var createdRoute = await _routeService.AddAsync(routeDTO);
 
             // Add the stations to the database with the created RouteId
@@ -72,7 +72,7 @@ namespace MyProject.WebAPI.Controllers
         public async Task<ActionResult<RouteDTO>> Update([FromBody] RouteModel routeModel)
         {
             // Update the route
-            RouteDTO routeDTO = new RouteDTO { Id = routeModel.Id };
+            RouteDTO routeDTO = new RouteDTO { Id = routeModel.Id, StartTime = routeModel.StartTime };
             var updatedRoute = await _routeService.UpdateAsync(routeDTO);
 
             // Update the stations with the existing RouteId

@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using MyProject.Common.DTOs;
-using MyProject.Repositories.Entities;
 using MyProject.Services.Interfaces;
 using MyProject.WebAPI.Models;
+using System.Threading.Tasks;
 
 namespace MyProject.WebAPI.Controllers
 {
@@ -28,23 +28,26 @@ namespace MyProject.WebAPI.Controllers
                 return NotFound();
             return user;
         }
-        [HttpPut]
-        public async Task<UserDTO> Update([FromBody] UserModel userModel)
-        {
-            return await _userService.UpdateAsync(new UserDTO() { Name = userModel.Name, PassWord = userModel.PassWord, Role = userModel.Role });
-        }
+
         [HttpPost("Login")]
-        public async Task<ActionResult<UserDTO>> Post(CustomerLoginModel login)
+        public async Task<ActionResult<UserDTO>> Login([FromBody] CustomerLoginModel login)
         {
-            var Customer = await _userService.Login(login.Username, login.Password);
-            if (Customer == null)
+            var user = await _userService.Login(login.Username, login.Password);
+            if (user == null)
                 return NotFound();
-            return Customer;
+            return user;
         }
+
         [HttpPost]
         public async Task<UserDTO> Post([FromBody] UserModel userModel)
         {
-            return await _userService.AddAsync(new UserDTO() { Name= userModel.Name, PassWord = userModel.PassWord, Role = userModel.Role});
+            return await _userService.AddAsync(_mapper.Map<UserDTO>(userModel));
+        }
+
+        [HttpPut]
+        public async Task<UserDTO> Update([FromBody] UserModel userModel)
+        {
+            return await _userService.UpdateAsync(_mapper.Map<UserDTO>(userModel));
         }
 
         [HttpDelete("{id}")]

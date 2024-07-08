@@ -1,24 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyProject.Repositories.Entities
+namespace MyProject.Common.DTOs
 {
-    public class CustomerDTO
+
+    public class CustomerDTO : UserDTO
     {
-        public int? Id { get; set; }
-
-        public string FirstName { get; set; } = string.Empty;
-
-        public string LastName { get; set; }= string.Empty;
-
-        public string FullAddress { get; set; } = string.Empty;
-
-        public string Email { get; set; } = string.Empty;
-
-        public int? UserId { get; set; }
+        public int? StationId { get; set; }
     }
 }
+

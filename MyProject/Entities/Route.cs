@@ -10,6 +10,8 @@ namespace MyProject.Repositories.Entities
     {
         public int Id { get; set; }
 
+        public string StartTime { get; set; }
+
         public List<Station> Stations { get; set; }
     }
 }

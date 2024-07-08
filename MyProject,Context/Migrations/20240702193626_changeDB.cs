@@ -27,7 +27,7 @@ namespace MyProject_Context.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Customers", x => x.Id);
+                    table.PrimaryKey("PK_Customers", x => x.UserId);
                 });
         }
 

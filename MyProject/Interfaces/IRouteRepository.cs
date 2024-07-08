@@ -11,7 +11,7 @@ namespace MyProject.Repositories.Interfaces
     {
         Task<Route> GetByIdAsync(int id);
 
-        Task<Route> AddAsync(int id, List<Station> stations);
+        Task<Route> AddAsync(int id, List<Station> stations, string startTime);
 
         Task<Route> UpdateAsync(Route route);
 

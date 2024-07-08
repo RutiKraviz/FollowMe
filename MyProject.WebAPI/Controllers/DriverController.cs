@@ -1,47 +1,74 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using MyProject.Common.DTOs;
-using MyProject.Repositories.Entities;
 using MyProject.Services.Interfaces;
 using MyProject.WebAPI.Models;
 
-
-namespace MyProject.WebAPI.Controllers
+[ApiController]
+[Route("api/[controller]")]
+public class DriverController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class DriverController: ControllerBase
+    private readonly IDriverService _driverService;
+    private readonly IMapper _mapper;
+
+    public DriverController(IDriverService driverService, IMapper mapper)
     {
-        private readonly IDriverService _driverService;
-        private readonly IMapper _mapper;
-        public DriverController(IDriverService driverService, IMapper mapper)
-        {
-            _driverService = driverService;
-            _mapper = mapper;
-        }
-        [HttpGet]
-        public async Task<ActionResult<DriverDTO>> Get(int id)
+        _driverService = driverService;
+        _mapper = mapper;
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<DriverDTO>> Get(int id)
+    {
+        try
         {
             var driver = await _driverService.GetByIdAsync(id);
-            if (driver == null)
-                return NotFound();
-            return driver;
+            return Ok(driver);
         }
-        [HttpPost]
-        public async Task<DriverDTO> Post([FromBody] DriverModel driverModel)
+        catch (InvalidOperationException ex)
         {
-            return await _driverService.AddAsync(new DriverDTO() { FirstName = driverModel.FirstName, LastName = driverModel.LastName, FullAddress=driverModel.FullAddress, Email=driverModel.Email}) ;   
+            return NotFound(ex.Message);
         }
-        [HttpPut]
-        public async Task<DriverDTO> Update([FromBody] DriverModel driverModel)
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<DriverDTO>> Post([FromBody] DriverModel driverModel)
+    {
+        //var driverDto = _mapper.Map<DriverDTO>(driverModel);
+        var addedDriver = await _driverService.AddAsync(new DriverDTO()
         {
-            return await _driverService.UpdateAsync(new DriverDTO() { FirstName = driverModel.FirstName, LastName = driverModel.LastName, FullAddress = driverModel.FullAddress, Email = driverModel.Email });
-        }
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
+            Id = driverModel.Id,
+            FirstName = driverModel.FirstName,
+            LastName = driverModel.LastName,
+            Email = driverModel.Email,
+            PassWord = driverModel.PassWord,
+            RoleId = 2,
+            RouteId = driverModel.RouteId,
+        });
+        return CreatedAtAction(nameof(Get), new { id = addedDriver.Id }, addedDriver);
+    }
+
+    [HttpPut]
+    public async Task<ActionResult<DriverDTO>> Update([FromBody] DriverModel driverModel)
+    {
+        var driverDto = _mapper.Map<DriverDTO>(new DriverDTO()
         {
-            await _driverService.DeleteAsync(id);
-            return NoContent();
-        }
+            Id = driverModel.Id,
+            FirstName = driverModel.FirstName,
+            LastName = driverModel.LastName,
+            Email = driverModel.Email,
+            PassWord = driverModel.PassWord,
+            RoleId = 2,
+            RouteId = driverModel.RouteId,
+        });
+        var updatedDriver = await _driverService.UpdateAsync(driverDto);
+        return Ok(updatedDriver);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _driverService.DeleteAsync(id);
+        return NoContent();
     }
 }

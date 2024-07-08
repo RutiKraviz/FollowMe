@@ -24,7 +24,7 @@ namespace MyProject_Context.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Costumeres", x => x.Id);
+                    table.PrimaryKey("PK_Costumeres", x => x.UserId);
                 });
 
             migrationBuilder.CreateTable(
