@@ -17,12 +17,13 @@ namespace MyProject.Repositories.Repositories
             _context = context;
         }
 
-        public async Task<Station> AddAsync(int id, string fullAddress, int routeId, string lan, string lat)
+        //public async Task<Station> AddAsync(int id, string fullAddress, int routeId, string lan, string lat)
+        public async Task<Station> AddAsync(Station station)
         {
-            var s = new Station() { Id = id, FullAddress = fullAddress, RouteId = routeId , Lan=lan, Lat=lat };
-            _context.Stations.Add(s);
+            //var s = new Station() { Id = id, FullAddress = fullAddress, RouteId = routeId , Lan=lan, Lat=lat };
+            _context.Stations.Add(station);
             await _context.SaveChangesAsync();
-            return s;
+            return station;
         }
 
         public async Task DeleteAsync(int id)

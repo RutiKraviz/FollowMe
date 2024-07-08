@@ -22,6 +22,8 @@ public class MyDbContext : DbContext, IContext
         modelBuilder.Entity<User>().ToTable("Users");
         modelBuilder.Entity<Customer>().ToTable("Customers");
         modelBuilder.Entity<Driver>().ToTable("Drivers");
+        modelBuilder.Entity<Route>().ToTable("Routes");
+        modelBuilder.Entity<Station>().ToTable("Stations");
 
         modelBuilder.Entity<Route>()
             .HasMany(r => r.Stations)

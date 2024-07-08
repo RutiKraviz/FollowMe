@@ -13,7 +13,7 @@ namespace MyProject.Repositories.Interfaces
         Task<Station> GetByIdAsync(int id);
         Task<List<Station>> GetByRouteIdAsync(int routeId);
 
-        Task<Station> AddAsync(int id, string fullAddress, int RouteId, string Lan, string Tan);
+        Task<Station> AddAsync(Station station);
 
         Task<Station> UpdateAsync(Station station);
 
