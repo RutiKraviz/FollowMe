@@ -12,8 +12,10 @@ builder.Services.AddCors(opt => opt.AddPolicy("PolicyName", policy =>
 }));
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<IContext, MyDbContext>(options => options.UseSqlServer("name=ConnectionStrings:MyProjectDB"));
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddDbContext<IContext, MyDbContext>(options =>
+    options.UseSqlServer("name=ConnectionStrings:MyProjectDB",
+    sqlOptions => sqlOptions.CommandTimeout(180)) // Set the command timeout in seconds
+);// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddServices();

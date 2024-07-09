@@ -43,7 +43,7 @@ namespace MyProject.WebAPI.Controllers
                 RoleId = 2,
                 StationId = customerModel.StationId,
             });
-            //return await _customerService.AddAsync(customerDto);
+            await _customerService.AddAsync(customerDto);
         }
 
         [HttpPut]
