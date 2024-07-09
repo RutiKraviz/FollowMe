@@ -39,7 +39,7 @@ namespace MyProject.WebAPI.Controllers
                 LastName = driverModel.LastName,
                 Email = driverModel.Email,
                 PassWord = driverModel.PassWord,
-                RoleId = 2,
+                RoleId = 1,
                 RouteId = driverModel.RouteId,
             });
             return await _driverService.AddAsync(driverDto);
@@ -55,7 +55,7 @@ namespace MyProject.WebAPI.Controllers
                 LastName = driverModel.LastName,
                 Email = driverModel.Email,
                 PassWord = driverModel.PassWord,
-                RoleId = 2,
+                RoleId = 1,
                 RouteId = driverModel.RouteId,
             });
             return await _driverService.UpdateAsync(driverDto);

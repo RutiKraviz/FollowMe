@@ -40,7 +40,9 @@ public class MyDbContext : DbContext, IContext
 
         // Ensure the derived types have the same key as the base type
         modelBuilder.Entity<Customer>()
-            .HasBaseType<User>();
+            .HasBaseType<User>()
+                    .Property(u => u.StationId).IsRequired();
+
 
         modelBuilder.Entity<Driver>()
             .HasBaseType<User>()
