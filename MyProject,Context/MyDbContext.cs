@@ -35,11 +35,15 @@ public class MyDbContext : DbContext, IContext
             .Property(s => s.FullAddress)
             .IsRequired();
 
+        modelBuilder.Entity<User>()
+            .HasKey(u => u.Id);
+
         // Ensure the derived types have the same key as the base type
         modelBuilder.Entity<Customer>()
             .HasBaseType<User>();
 
         modelBuilder.Entity<Driver>()
-            .HasBaseType<User>();
+            .HasBaseType<User>()
+            .Property(u => u.RouteId).IsRequired();
     }
 }

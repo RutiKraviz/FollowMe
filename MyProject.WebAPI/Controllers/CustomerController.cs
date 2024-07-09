@@ -30,8 +30,7 @@ namespace MyProject.WebAPI.Controllers
         }
 
         [HttpPost]
-        //public async Task<CustomerDTO> Post([FromBody] CustomerModel customerModel)
-        public async void Post([FromBody] CustomerModel customerModel)
+        public async Task<CustomerDTO> Post([FromBody] CustomerModel customerModel)
         {
             var customerDto = _mapper.Map<CustomerDTO>(new CustomerDTO()
             {
@@ -43,7 +42,7 @@ namespace MyProject.WebAPI.Controllers
                 RoleId = 2,
                 StationId = customerModel.StationId,
             });
-            await _customerService.AddAsync(customerDto);
+            return await _customerService.AddAsync(customerDto);
         }
 
         [HttpPut]

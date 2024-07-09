@@ -28,17 +28,25 @@ public class UserService : IUserService
             _context.Entry(existingUser).State = EntityState.Detached;
         }
 
-        return _mapper.Map<UserDTO>(await _userRepository.AddAsync(user));
+        _context.Users.Add(user);
+        await _context.SaveChangesAsync();
+        return _mapper.Map<UserDTO>(user);
     }
 
     public async Task DeleteAsync(int id)
     {
-        await _userRepository.DeleteAsync(id);
+        var user = await _userRepository.GetByIdAsync(id);
+        if (user != null)
+        {
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+        }
     }
 
     public async Task<UserDTO> GetByIdAsync(int id)
     {
-        return _mapper.Map<UserDTO>(await _userRepository.GetByIdAsync(id));
+        var user = await _userRepository.GetByIdAsync(id);
+        return _mapper.Map<UserDTO>(user);
     }
 
     public async Task<UserDTO> UpdateAsync(UserDTO userDto)
@@ -52,11 +60,14 @@ public class UserService : IUserService
             _context.Entry(existingUser).State = EntityState.Detached;
         }
 
-        return _mapper.Map<UserDTO>(await _userRepository.UpdateAsync(user));
+        _context.Users.Update(user);
+        await _context.SaveChangesAsync();
+        return _mapper.Map<UserDTO>(user);
     }
 
     public async Task<UserDTO> Login(string name, string password)
     {
-        return _mapper.Map<UserDTO>(await _userRepository.Login(name, password));
+        var user = await _userRepository.Login(name, password);
+        return _mapper.Map<UserDTO>(user);
     }
 }

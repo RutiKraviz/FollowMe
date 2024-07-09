@@ -1,4 +1,5 @@
-﻿using MyProject.Repositories.Entities.MyProject.Repositories.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MyProject.Repositories.Entities.MyProject.Repositories.Entities;
 using MyProject.Repositories.Interfaces;
 
 public class DriverRepository : IDriverRepository

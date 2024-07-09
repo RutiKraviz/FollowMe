@@ -16,21 +16,25 @@ public class CustomerRepository : ICustomerRepository
         return customer;
     }
 
-    public async Task AddAsync(Customer customer)
+    public async Task<Customer> AddAsync(Customer customer)
     {
         // Check if the customer already exists
         var existingCustomer = await _context.Customers.FindAsync(customer.Id);
         if (existingCustomer == null)
         {
-            _context.Customers.Add(customer);
+            var res = _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
+            return res.Entity;
         }
+        return existingCustomer;
     }
 
-    public async Task UpdateAsync(Customer customer)
+    public async Task<Customer> UpdateAsync(Customer customer)
     {
-        _context.Customers.Update(customer);
+        var result = _context.Customers.Update(customer);
         await _context.SaveChangesAsync();
+        return result.Entity;
+
     }
 
     public async Task DeleteAsync(int id)

@@ -2,84 +2,66 @@
 using Microsoft.EntityFrameworkCore;
 using MyProject.Common.DTOs;
 using MyProject.Repositories.Entities.MyProject.Repositories.Entities;
-using MyProject.Repositories.Entities;
-using MyProject.Repositories.Interfaces;
 using MyProject.Services.Interfaces;
+using System;
+using System.Threading.Tasks;
 
-public class DriverService : IDriverService
+namespace MyProject.Services
 {
-    private readonly IUserRepository _userRepository;
-    private readonly IDriverRepository _driverRepository;
-    private readonly IMapper _mapper;
-    private readonly MyDbContext _context;
-
-    public DriverService(IUserRepository userRepository, IDriverRepository driverRepository, IMapper mapper, MyDbContext context)
+    public class DriverService : IDriverService
     {
-        _userRepository = userRepository;
-        _driverRepository = driverRepository;
-        _mapper = mapper;
-        _context = context;
-    }
+        private readonly IMapper _mapper;
+        private readonly MyDbContext _context;
 
-    public async Task<DriverDTO> GetByIdAsync(int userId)
-    {
-        var driver = await _driverRepository.GetByIdAsync(userId);
-        if (driver == null)
+        public DriverService(IMapper mapper, MyDbContext context)
         {
-            throw new InvalidOperationException("Driver not found");
-        }
-        return _mapper.Map<DriverDTO>(driver);
-    }
-
-    public async Task<DriverDTO> AddAsync(DriverDTO driverDto)
-    {
-        var user = _mapper.Map<User>(driverDto);
-
-        // Detach any existing instances with the same primary key
-        var existingUser = await _context.Users.FindAsync(user.Id);
-        if (existingUser != null)
-        {
-            _context.Entry(existingUser).State = EntityState.Detached;
+            _mapper = mapper;
+            _context = context;
         }
 
-        await _userRepository.AddAsync(user);
-
-        var driver = new Driver
+        public async Task<DriverDTO> GetByIdAsync(int userId)
         {
-            Id = user.Id, // Ensure the same Id
-            RouteId = driverDto.RouteId
-        };
+            var driver = await _context.Drivers.FindAsync(userId);
+            if (driver == null)
+            {
+                throw new InvalidOperationException("Driver not found");
+            }
 
-        var existingDriver = await _context.Drivers.FindAsync(driver.Id);
-        if (existingDriver != null)
-        {
-            _context.Entry(existingDriver).State = EntityState.Detached;
+            return _mapper.Map<DriverDTO>(driver);
         }
 
-        await _driverRepository.AddAsync(driver);
-
-        return _mapper.Map<DriverDTO>(driver);
-    }
-
-    public async Task<DriverDTO> UpdateAsync(DriverDTO driverDto)
-    {
-        var driver = _mapper.Map<Driver>(driverDto);
-
-        // Detach any existing instances with the same primary key
-        var existingDriver = await _context.Drivers.FindAsync(driver.Id);
-        if (existingDriver != null)
+        public async Task<DriverDTO> AddAsync(DriverDTO driverDto)
         {
-            _context.Entry(existingDriver).State = EntityState.Detached;
+            var driver = _mapper.Map<Driver>(driverDto);
+
+            await _context.Drivers.AddAsync(driver);
+            await _context.SaveChangesAsync();
+
+            return _mapper.Map<DriverDTO>(driver);
         }
 
-        await _userRepository.UpdateAsync(driver);
-        await _driverRepository.UpdateAsync(driver);
-        return _mapper.Map<DriverDTO>(driver);
-    }
+        public async Task<DriverDTO> UpdateAsync(DriverDTO driverDto)
+        {
+            var driver = await _context.Drivers.FindAsync(driverDto.Id);
+            if (driver == null)
+            {
+                throw new InvalidOperationException("Driver not found");
+            }
 
-    public async Task DeleteAsync(int userId)
-    {
-        await _driverRepository.DeleteAsync(userId);
-        await _userRepository.DeleteAsync(userId);
+            _mapper.Map(driverDto, driver);
+            await _context.SaveChangesAsync();
+
+            return _mapper.Map<DriverDTO>(driver);
+        }
+
+        public async Task DeleteAsync(int userId)
+        {
+            var driver = await _context.Drivers.FindAsync(userId);
+            if (driver != null)
+            {
+                _context.Drivers.Remove(driver);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }
