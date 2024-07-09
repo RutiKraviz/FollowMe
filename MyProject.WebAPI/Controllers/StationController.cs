@@ -15,21 +15,12 @@ namespace MyProject.WebAPI.Controllers
         private readonly IStationService _stationService;
         private readonly IRouteService _routeService;
         private readonly IMapper _mapper;
-
         public StationController(IStationService stationService, IMapper mapper, IRouteService routeService)
         {
             _stationService = stationService;
-            _routeService = routeService;
+            _routeService =  routeService;
             _mapper = mapper;
         }
-
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<StationDTO>>> GetAll()
-        {
-            var stations = await _stationService.GetAllAsync();
-            return Ok(stations);
-        }
-
         [HttpGet("{id}")]
         public async Task<ActionResult<StationDTO>> Get(int id)
         {
@@ -38,11 +29,10 @@ namespace MyProject.WebAPI.Controllers
                 return NotFound();
             return station;
         }
-
         [HttpPost]
         public async Task<StationDTO> Post([FromBody] StationModel stationModel)
         {
-            return await _stationService.AddAsync(new StationDTO() { FullAddress = stationModel.FullAddress, RouteId = stationModel.RouteId, Lan = stationModel.Lan, Lat = stationModel.Lat });
+            return await _stationService.AddAsync(new StationDTO() {FullAddress = stationModel.FullAddress, RouteId = stationModel.RouteId, Lan = stationModel.Lan, Lat = stationModel.Lat});
         }
 
         [HttpGet("Route/{id}")]
@@ -57,8 +47,11 @@ namespace MyProject.WebAPI.Controllers
             {
                 return NotFound();
             }
+
+            // Ensure the stations are included
             var stations = await _stationService.GetByRouteIdAsync(route.Id);
             route.Stations = _mapper.Map<List<StationDTO>>(stations);
+
             return route;
         }
 
@@ -67,7 +60,6 @@ namespace MyProject.WebAPI.Controllers
         {
             return await _stationService.UpdateAsync(new StationDTO() { FullAddress = stationModel.FullAddress, RouteId = stationModel.RouteId, Lan = stationModel.Lan, Lat = stationModel.Lat });
         }
-
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
