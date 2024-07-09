@@ -12,12 +12,16 @@ namespace MyProject.WebAPI.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly ICustomerService _customerService;
+        private readonly IDriverService _driverService;
         private readonly IMapper _mapper;
 
-        public UserController(IUserService userService, IMapper mapper)
+        public UserController(IUserService userService, IMapper mapper, ICustomerService customerService, IDriverService driverService)
         {
             _userService = userService;
             _mapper = mapper;
+            _customerService = customerService;
+            _driverService = driverService;
         }
 
         [HttpGet("{id}")]
@@ -30,12 +34,28 @@ namespace MyProject.WebAPI.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<ActionResult<UserDTO>> Login([FromBody] CustomerLoginModel login)
+        public async Task<ActionResult> Login([FromBody] CustomerLoginModel login)
         {
             var user = await _userService.Login(login.Username, login.Password);
             if (user == null)
                 return NotFound();
-            return user;
+
+            if (user.RoleId == 1)
+            {
+                var driver = await _driverService.GetByIdAsync(user.Id);
+                if (driver == null)
+                    return NotFound();
+                return Ok(driver);
+            }
+            else if (user.RoleId == 2)
+            {
+                var customer = await _customerService.GetByIdAsync(user.Id);
+                if (customer == null)
+                    return NotFound();
+                return Ok(customer);
+            }
+
+            return BadRequest("Invalid role.");
         }
 
         [HttpPost]

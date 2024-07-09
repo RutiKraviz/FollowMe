@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using MyProject.Common.DTOs;
+using MyProject.Repositories.Entities;
+using MyProject.Repositories.Interfaces;
 using MyProject.Services.Interfaces;
 using MyProject.WebAPI.Models;
 
@@ -11,10 +13,12 @@ namespace MyProject.WebAPI.Controllers
     public class StationController : ControllerBase
     {
         private readonly IStationService _stationService;
+        private readonly IRouteService _routeService;
         private readonly IMapper _mapper;
-        public StationController(IStationService stationService, IMapper mapper)
+        public StationController(IStationService stationService, IMapper mapper, IRouteService routeService)
         {
             _stationService = stationService;
+            _routeService =  routeService;
             _mapper = mapper;
         }
         [HttpGet("{id}")]
@@ -30,6 +34,27 @@ namespace MyProject.WebAPI.Controllers
         {
             return await _stationService.AddAsync(new StationDTO() {FullAddress = stationModel.FullAddress, RouteId = stationModel.RouteId, Lan = stationModel.Lan, Lat = stationModel.Lat});
         }
+
+        [HttpGet("Route/{id}")]
+        public async Task<ActionResult<RouteDTO>> Login(int id)
+        {
+            var station = await _stationService.GetByIdAsync(id);
+            if (station == null)
+                return NotFound();
+            int RouteId = station.RouteId;
+            var route = await _routeService.GetByIdAsync(RouteId);
+            if (route == null)
+            {
+                return NotFound();
+            }
+
+            // Ensure the stations are included
+            var stations = await _stationService.GetByRouteIdAsync(route.Id);
+            route.Stations = _mapper.Map<List<StationDTO>>(stations);
+
+            return route;
+        }
+
         [HttpPut]
         public async Task<StationDTO> Update([FromBody] StationModel stationModel)
         {

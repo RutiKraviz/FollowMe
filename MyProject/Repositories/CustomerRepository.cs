@@ -12,7 +12,8 @@ public class CustomerRepository : ICustomerRepository
 
     public async Task<Customer> GetByIdAsync(int id)
     {
-        return await _context.Customers.FindAsync(id);
+        var customer = await _context.Customers.FindAsync(id);
+        return customer;
     }
 
     public async Task AddAsync(Customer customer)
